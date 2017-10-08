@@ -40,7 +40,7 @@ cp /home/vse/Neptune_Work_folder/XBeach/real_time/figures/xbeach_mgb_movietest.m
 
 #git set url git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
 
-git remote set-url origin git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
+git remote set-url origin git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git/Xbeach
 git pull
 git add --all
 git commit -m "testing"
