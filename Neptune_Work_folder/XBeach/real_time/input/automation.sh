@@ -44,5 +44,5 @@ git remote set-url origin git@github.com:MasonFloodHazardsResearchLab/MasonFlood
 git pull
 git add --all
 git commit -m "testing"
-git push 
+git push -f origin <Xbeach>
 
