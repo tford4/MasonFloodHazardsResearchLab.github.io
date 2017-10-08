@@ -24,24 +24,25 @@
 #cd /home/vse/Neptune_Work_folder/XBeach/real_time/output
 
 
-matlab -nodisplay -nosplash -r "run /home/vse/Neptune_Work_folder/XBeach/real_time/matlab_for_rt/video_plot.m; exit;"
+#matlab -nodisplay -nosplash -r "run /home/vse/Neptune_Work_folder/XBeach/real_time/matlab_for_rt/video_plot.m; exit;"
 
-killall -9 matlab
+#killall -9 matlab
 
 cd /home/vse/Neptune_Work_folder/XBeach/real_time/figures
 
 ffmpeg -i xbeach_mgb.avi xbeach_mgb_movietest.mp4
 
+cp /home/vse/Neptune_Work_folder/XBeach/real_time/figures/xbeach_mgb_movietest.mp4  /home/vse/Neptune_Work_folder/XBeach/real_time/figures/MasonFloodHazardsResearchLab.github.io/Xbeach
 
-push git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git/Xbeach/xbeach_mgb_movie.mp4
+#git push git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git/Xbeach
 
-git clone git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
+#git clone git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
 
-git set url git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
+#git set url git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
 
+git remote set-url origin git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
 git pull
-
-git add
-
-git push
+git add --all
+git commit -m "testing"
+git push 
 
