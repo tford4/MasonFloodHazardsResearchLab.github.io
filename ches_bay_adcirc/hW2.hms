@@ -1,0 +1,12 @@
+Project: hW2
+     Description: HW2_hms
+     Version: 3.5
+     Filepath Separator: \
+     DSS File Name: hW2.dss
+End:
+
+Basin: Basin 1
+     FileName: Basin_1.basin
+     Description: 
+End:
+
