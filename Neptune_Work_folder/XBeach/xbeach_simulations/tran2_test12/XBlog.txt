@@ -1,0 +1,439 @@
+  **********************************************************
+                     Welcome to XBeach
+ 
+               version 1.22.5212M
+               dateTue Oct  3 16:04:27 EDT 2017
+     URL:URL: https://svn.oss.deltares.nl/repos/xbeach/trunk/src/xbeachlibrary
+  **********************************************************
+ 
+  Simulation started: YYYYMMDD    hh:mm:ss     time zone (UTC)
+                      20171009  15:56:06     -0400
+ 
+    running in:/home/vse/Neptune_Work_folder/XBeach/xbeach_simulations/tran2_test12
+  General Input Module
+  Reading input parameters:
+  --------------------------------
+  Physical processes:
+   XBeach reading fromparams.txt
+                    cyclic =0 (no record found, default value used)
+                     swave =1 (no record found, default value used)
+                single_dir =0
+                     lwave =1 (no record found, default value used)
+                      flow =1 (no record found, default value used)
+                  sedtrans =1 (no record found, default value used)
+                morphology =1 (no record found, default value used)
+               avalanching =0
+                      nonh =0 (no record found, default value used)
+                    gwflow =0 (no record found, default value used)
+                     ships =0 (no record found, default value used)
+                vegetation =1
+                  setbathy =0 (no record found, default value used)
+                 viscosity =1 (no record found, default value used)
+                 advection =1 (no record found, default value used)
+                      wind =1 (no record found, default value used)
+  --------------------------------
+  Grid parameters:
+                  gridform =xbeach (no record found, default value used)
+                      xori =.0000
+                      yori =.0000 (no record found, default value used)
+                      alfa =.0000
+                        nx =355
+                        ny =0
+                    posdwn =-1.0000
+                   depfile =bed.dep
+                     vardx =1
+                        dx =-1.0000 (no record found, default value used)
+                        dy =-1.0000 (no record found, default value used)
+                     xfile =x.grd
+                     yfile = None specified
+                        nz =1 (no record found, default value used)
+                  thetamin =.0000
+                  thetamax =180.0000
+                 thetanaut =1
+                    dtheta =180.0000
+  --------------------------------
+  Model time parameters:
+                       CFL =.7000
+                     dtset =.0000 (no record found, default value used)
+                     tstop =259200.0000
+                  maxdtfac =50.0000 (no record found, default value used)
+  --------------------------------
+  Physical constants:
+                       rho =1025.0000 (no record found, default value used)
+                         g =9.8100 (no record found, default value used)
+                depthscale =1.0000 (no record found, default value used)
+  --------------------------------
+  Initial conditions:
+                zsinitfile = None specified
+  --------------------------------
+  Wave boundary condition parameters:
+                    instat =jons
+                    bcfile =jonswap.txt
+                     taper =100.0000 (no record found, default value used)
+                      nmax =.8000 (no record found, default value used)
+               lateralwave =neumann (no record found, default value used)
+  --------------------------------
+  Wave-spectrum boundary condition parameters:
+              nonhspectrum =0 (no record found, default value used)
+                    random =1 (no record found, default value used)
+                   fcutoff =.0000 (no record found, default value used)
+                   trepfac =.0100 (no record found, default value used)
+                   sprdthr =.0800 (no record found, default value used)
+                Tm01switch =0 (no record found, default value used)
+                        rt =1800.0000
+                      dtbc =1.0000
+              nspectrumloc =1 (no record found, default value used)
+  --------------------------------
+  Flow boundary condition parameters:
+                     front =abs_1d
+                      left =neumann
+                     right =neumann
+                      back =abs_1d
+                       ARC =1 (no record found, default value used)
+                     order =2.0000 (no record found, default value used)
+                  freewave =0 (no record found, default value used)
+                      epsi =-1.0000
+                  tidetype =velocity (no record found, default value used)
+  --------------------------------
+  Tide boundary conditions:
+                   tideloc =2
+                paulrevere =land (no record found, default value used)
+                   zs0file =tide.txt
+  --------------------------------
+  Discharge boundary conditions:
+            disch_loc_file = None specified
+     disch_timeseries_file = None specified
+                ndischarge =0 (no record found, default value used)
+               ntdischarge =0 (no record found, default value used)
+                      beta =.1000 (no record found, default value used)
+  --------------------------------
+  Wave breaking parameters:
+                     break =roelvink2 (no record found, default value used)
+                     gamma =.5500 (no record found, default value used)
+                    gammax =2.0000 (no record found, default value used)
+                     alpha =1.0000 (no record found, default value used)
+                         n =10.0000 (no record found, default value used)
+                     delta =.0000 (no record found, default value used)
+                        fw =.0000 (no record found, default value used)
+                    fwfile = None specified
+                  fwcutoff =1000.0000 (no record found, default value used)
+              breakerdelay =1.0000 (no record found, default value used)
+  --------------------------------
+  Roller parameters:
+                    roller =1 (no record found, default value used)
+                       rfb =0 (no record found, default value used)
+  --------------------------------
+  Wave-current interaction parameters:
+                       wci =0 (no record found, default value used)
+                      hwci =.1000 (no record found, default value used)
+                   hwcimax =100.0000 (no record found, default value used)
+                      cats =4.0000 (no record found, default value used)
+  --------------------------------
+  Flow parameters:
+               bedfriction =manning
+               bedfricfile =bedfricfile.txt
+  Warning: bed friction coefficient values from file 'bedfricfile.txt' will be used in computation
+                       nuh =.1000 (no record found, default value used)
+                    nuhfac =1.0000 (no record found, default value used)
+                      smag =1 (no record found, default value used)
+  --------------------------------
+  Coriolis force parameters:
+                    wearth =.0417 (no record found, default value used)
+                       lat =.0000 (no record found, default value used)
+  --------------------------------
+  Wind parameters:
+                      rhoa =1.2500 (no record found, default value used)
+                        Cd =.0020 (no record found, default value used)
+                  windfile = None specified
+                     windv =.0000 (no record found, default value used)
+                    windth =270.0000 (no record found, default value used)
+  --------------------------------
+  Sediment transport parameters:
+                      form =vanthiel_vanrijn (no record found, default value used)
+                  waveform =vanthiel (no record found, default value used)
+                       sws =1 (no record found, default value used)
+                       lws =1 (no record found, default value used)
+                     BRfac =1.0000 (no record found, default value used)
+                     facsl =1.6000 (no record found, default value used)
+                        z0 =.0060 (no record found, default value used)
+                      smax =-1.0000 (no record found, default value used)
+                     tsfac =.1000 (no record found, default value used)
+                     facua =.2000
+                     facSk =.2000 (no record found, default value used)
+                     facAs =.2000 (no record found, default value used)
+                   turbadv =none (no record found, default value used)
+                      turb =bore_averaged (no record found, default value used)
+                     Tbfac =1.0000 (no record found, default value used)
+                     Tsmin =.5000 (no record found, default value used)
+                       lwt =0 (no record found, default value used)
+                     betad =1.0000 (no record found, default value used)
+                       sus =1 (no record found, default value used)
+                       bed =1 (no record found, default value used)
+                      bulk =0 (no record found, default value used)
+                     facDc =1.0000 (no record found, default value used)
+                fallvelred =0 (no record found, default value used)
+                 dilatancy =0 (no record found, default value used)
+               reposeangle =30.0000 (no record found, default value used)
+               bdslpeffmag =roelvink_total (no record found, default value used)
+               bdslpeffini =none (no record found, default value used)
+               bdslpeffdir =none (no record found, default value used)
+  --------------------------------
+  Bed composition parameters:
+                       ngd =1 (no record found, default value used)
+                        nd =3 (no record found, default value used)
+                       por =.4000 (no record found, default value used)
+   D50 =.0002 (no record found, default value used)
+   D90 =.0003 (no record found, default value used)
+                      rhos =2650.0000 (no record found, default value used)
+                       dzg =.1000 (no record found, default value used)
+                      dzg1 =.1000 (no record found, default value used)
+                      dzg2 =.1000 (no record found, default value used)
+                      dzg3 =.1000 (no record found, default value used)
+   sedcal =1.0000 (no record found, default value used)
+   ucrcal =1.0000 (no record found, default value used)
+  --------------------------------
+  Morphology parameters:
+                    morfac =1.0000
+                 morfacopt =1 (no record found, default value used)
+                  morstart =.0000
+                   morstop =259200.0000 (no record found, default value used)
+                    wetslp =.3000 (no record found, default value used)
+                    dryslp =1.0000 (no record found, default value used)
+                   hswitch =.1000 (no record found, default value used)
+                     dzmax =.0500 (no record found, default value used)
+                    struct =0 (no record found, default value used)
+  --------------------------------
+  Output variables:
+                   timings =1 (no record found, default value used)
+                    tunits = None specified
+                    tstart =.0000
+                      tint =259200.0000 Warning: value > recommended value of100000.0000
+                  tsglobal = None specified
+                     tintg =1200.0000
+                  tspoints = None specified
+                     tintp =259200.0000 (no record found, default value used)
+                    tsmean = None specified
+                     tintm =259200.0000
+                nglobalvar =5
+   nglobalvar: Will generate global output for variable:zb
+   nglobalvar: Will generate global output for variable:zs
+   nglobalvar: Will generate global output for variable:H
+   nglobalvar: Will generate global output for variable:u
+   nglobalvar: Will generate global output for variable:v
+                   npoints =0 (no record found, default value used)
+                  nrugauge =0 (no record found, default value used)
+                 npointvar =0 (no record found, default value used)
+                 nrugdepth =1 (no record found, default value used)
+   rugdepth =.0000 (no record found, default value used)
+                  nmeanvar =5
+   nmeanvar: Will generate mean, min, max and variance output for variable:zb
+   nmeanvar: Will generate mean, min, max and variance output for variable:zs
+   nmeanvar: Will generate mean, min, max and variance output for variable:H
+   nmeanvar: Will generate mean, min, max and variance output for variable:u
+   nmeanvar: Will generate mean, min, max and variance output for variable:v
+              outputformat =fortran
+  --------------------------------
+  Output projection:
+                projection = None specified
+                    rotate =1 (no record found, default value used)
+  --------------------------------
+  Vegetation parameters:
+                veggiefile =vegetation.txt
+             veggiemapfile =spartina_tran.txt
+  --------------------------------
+  Wave numerics parameters:
+                    scheme =upwind_2 (no record found, default value used)
+                    snells =1 (no record found, default value used)
+  --------------------------------
+  Flow numerics parameters:
+                       eps =.0050 (no record found, default value used)
+                    eps_sd =.5000 (no record found, default value used)
+                      umin =.0000 (no record found, default value used)
+                      hmin =.2000 (no record found, default value used)
+                  secorder =0 (no record found, default value used)
+  --------------------------------
+  Sediment transport numerics parameters:
+                  thetanum =1.0000 (no record found, default value used)
+                sourcesink =0 (no record found, default value used)
+                      cmax =.1000 (no record found, default value used)
+  --------------------------------
+  Bed update numerics parameters:
+                   frac_dz =.7000 (no record found, default value used)
+                    nd_var =2 (no record found, default value used)
+                     split =1.0100 (no record found, default value used)
+                     merge =.0100 (no record found, default value used)
+  --------------------------------
+  Finished reading input parameters
+  --------------------------------
+   Unknown, unused or multiple statements of parameterDTHETA_S inparams.txt
+   Unknown, unused or multiple statements of parameterTIDELEN inparams.txt
+   Unknown, unused or multiple statements of parameterWAVEMODEL inparams.txt
+   Unknown, unused or multiple statements of parameterZS0 inparams.txt
+   Unknown, unused or multiple statements of parameterMPIBOUNDARY inparams.txt
+  ------------------------------------
+  Building Grid and Bathymetry
+  ------------------------------------
+  Initializing .....
+   readtide: reading tide time series fromtide.txt ...
+  --------------------------------
+  Initializing spectral wave boundary conditions
+  --------------------------------
+  --------------------------------
+  Initializing vegetation input settings
+   XBeach reading fromspartina.txt
+                      npts =2
+                        zv =.0500
+                        zv =.7500
+                        bv =.0200
+                        bv =.0200
+                         N =200.0000
+                         N =200.0000
+                        Cd =1.0000
+                        Cd =1.0000
+   XBeach reading fromspartina2.txt
+                      npts =2
+                        zv =.0050
+                        zv =1.2500
+                        bv =.0300
+                        bv =.0200
+                         N =200.0000
+                         N =200.0000
+                        Cd =1.0000
+                        Cd =1.0000
+  --------------------------------
+  Finished reading vegetation input...
+  Fortran outputformat
+  Setting up boundary conditions
+  --------------------------------
+  Calculating spectral wave boundary conditions
+  --------------------------------
+  Reading spectrum at location1
+   waveparams: Reading fromjonswap.txt ...
+   XBeach reading fromjonswap.txt
+                    nmodal =1 (no record found, default value used)
+                       Hm0 =.1000
+                        fp =.1667
+                  gammajsp =3.3000
+                         s =10.0000
+   tma =0 (no record found, default value used)
+                   mainang =90.0000
+                      fnyq =.4000
+                       dfj =.0020 (no record found, default value used)
+  Interpreting spectrum at location1
+  Values calculated from interpolated spectrum:
+  Hm0       =.10 m
+  Trep      =5.50 s
+  Mean dir  =90.43 degN
+  Overall Trep from all spectra calculated:5.50 s
+  Calculating Fourier components
+  5.0% done
+  10.0% done
+  15.0% done
+  20.0% done
+  25.0% done
+  30.0% done
+  35.0% done
+  40.0% done
+  45.0% done
+  50.0% done
+  55.0% done
+  60.0% done
+  65.0% done
+  70.0% done
+  75.0% done
+  80.0% done
+  85.0% done
+  90.0% done
+  95.0% done
+  100.0% done
+  Wave energy outside computational domain at offshore boundary:.0%
+  Calculating short wave time series for theta bin1 of1
+  Y-point1 of1 done.
+  Wave bin1 contains100.00% of total energy
+   Writing wave energy toE_reuse.bcf ...
+  file done
+  Calculating primary wave interaction
+  5.0% done
+  10.0% done
+  15.1% done
+  20.1% done
+  25.1% done
+  30.1% done
+  35.1% done
+  40.2% done
+  45.2% done
+  50.2% done
+  55.2% done
+  60.2% done
+  65.3% done
+  70.3% done
+  75.3% done
+  80.3% done
+  85.3% done
+  90.3% done
+  95.4% done
+  100.0% done
+  Calculating flux at boundary
+  Flux1 of1
+   Writing long wave mass flux toq_reuse.bcf ...
+  file done
+  --------------------------------
+  Spectral wave boundary conditions complete
+  --------------------------------
+  Boundary conditions complete, starting computation
+  Simulation  0.6 percent complete. Average dt  0.379 seconds
+  Time remaining 14 minutes
+  Simulation  1.2 percent complete. Average dt  0.379 seconds
+  Time remaining 13 minutes
+  Simulation  1.8 percent complete. Average dt  0.380 seconds
+  Time remaining 13 minutes
+  Simulation  2.4 percent complete. Average dt  0.383 seconds
+  Time remaining 13 minutes
+  Simulation  3.1 percent complete. Average dt  0.387 seconds
+  Time remaining 12 minutes
+  Simulation  3.7 percent complete. Average dt  0.387 seconds
+  Time remaining 12 minutes
+  Simulation  4.3 percent complete. Average dt  0.387 seconds
+  Time remaining 12 minutes
+  Simulation  5.0 percent complete. Average dt  0.382 seconds
+  Time remaining 12 minutes
+  Simulation  5.6 percent complete. Average dt  0.376 seconds
+  Time remaining 12 minutes
+  Simulation  6.2 percent complete. Average dt  0.364 seconds
+  Time remaining 12 minutes
+  Simulation  6.7 percent complete. Average dt  0.350 seconds
+  Time remaining 13 minutes
+  Simulation  7.3 percent complete. Average dt  0.339 seconds
+  Time remaining 13 minutes
+  Simulation  7.8 percent complete. Average dt  0.331 seconds
+  Time remaining 13 minutes
+  Simulation  8.3 percent complete. Average dt  0.322 seconds
+  Time remaining 13 minutes
+  Simulation  8.8 percent complete. Average dt  0.317 seconds
+  Time remaining 14 minutes
+  Simulation  9.3 percent complete. Average dt  0.314 seconds
+  Time remaining 14 minutes
+  Simulation  9.8 percent complete. Average dt  0.311 seconds
+  Time remaining 14 minutes
+  Simulation 10.2 percent complete. Average dt  0.311 seconds
+  Time remaining 14 minutes
+  Simulation 10.7 percent complete. Average dt  0.314 seconds
+  Time remaining 14 minutes
+  Simulation 11.2 percent complete. Average dt  0.316 seconds
+  Time remaining 14 minutes
+  Simulation 11.7 percent complete. Average dt  0.319 seconds
+  Time remaining 14 minutes
+  Simulation 12.1 percent complete. Average dt  0.321 seconds
+  Time remaining 14 minutes
+  Simulation 12.6 percent complete. Average dt  0.323 seconds
+  Time remaining 14 minutes
+  Simulation 13.1 percent complete. Average dt  0.326 seconds
+  Time remaining 14 minutes
+  Simulation 13.6 percent complete. Average dt  0.330 seconds
+  Time remaining 13 minutes
+  Simulation 14.1 percent complete. Average dt  0.333 seconds
+  Time remaining 13 minutes
+  Simulation 14.6 percent complete. Average dt  0.338 seconds
+  Time remaining 13 minutes
+  Simulation 15.1 percent complete. Average dt  0.344 seconds
+  Time remaining 13 minutes
