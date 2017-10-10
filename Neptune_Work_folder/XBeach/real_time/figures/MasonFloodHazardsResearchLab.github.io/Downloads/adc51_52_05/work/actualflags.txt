@@ -1,0 +1,26 @@
+----------------------------------
+Fri Sep  1 13:56:20 EDT 2017
+building adcirc
+PPFC := ifort
+FC := ifort
+PFC := mpif90
+FFLAGS1 := -I . -I ../prep -O2 -FI -assume byterecl -132 -i-dynamic -xSSE4.2 -assume buffered_io
+FFLAGS2 := -I . -I ../prep -O2 -FI -assume byterecl -132 -i-dynamic -xSSE4.2 -assume buffered_io
+FFLAGS3 := -I . -I ../prep -O2 -FI -assume byterecl -132 -i-dynamic -xSSE4.2 -assume buffered_io
+DA := -DREAL8 -DLINUX -DCSCA
+DP := -DREAL8 -DLINUX -DCSCA -DCMPI
+DPRE := -DREAL8 -DLINUX
+IMODS := -I
+CC := icc
+CCBE := icc
+CFLAGS := -I . -I ../prep -O2 -xSSE4.2 -m64 -mcmodel=medium -DLINUX
+CLIBS := 
+LIBS := 
+MSGLIBS := 
+compiler := intel
+MACHINENAME := 
+NETCDF := 
+NETCDF4 := 
+NETCDF4_COMPRESSION := 
+XDMF := 
+----------------------------------

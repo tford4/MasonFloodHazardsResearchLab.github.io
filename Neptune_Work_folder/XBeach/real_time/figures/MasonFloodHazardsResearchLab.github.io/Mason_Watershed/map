@@ -1,0 +1,315 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- GENERAL USE MASON TEMPLATE v. 1.2
+     Designed by Josh Hughes, Web Communications (josh@deaghean.com) -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/index.dwt" -->
+  <head>
+   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <!--head content for map-->
+  <!-- <meta charset='utf-8' />-->
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { height: 500px; width : 1000px; }
+    </style>
+  <!--end of head content for map-->
+   
+<!--InstanceBeginEditable name="head" -->
+<link
+href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/0BpAP9AaQD/ZoczYAAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/AAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/wAAAAAAAAAAQGkA/wAAAAAAAAAAQGkA/0BpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAfppTK0BpAP8AAAAAAAAAAEBpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/AAAAAEBpAP9AaQD/QGkA/wAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAEBpAP8AAAAAQGkA/0BpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP9AaQD/QGkA/wAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAEBpAP9AaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/QGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABC+/v8AAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEL7+/xC+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/EL7+/xC+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7EEL7+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/jj8AAN8/AADbPwAA2z8AANE/AADFPwAAxj8AAM4/AAD/vwAA/38AAP8PAAD/owAA/88AAP/jAAD/+QAA//4AAA=="
+rel="icon" type="image/x-icon" />
+    <title>Mason Educational Flood Forecast System - George Mason University</title>
+<!--InstanceEndEditable -->
+    <style type="text/css">
+@import url("https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/css/template.css");
+</style>
+
+    <script src="https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/js/jquery.js" type="text/javascript"></script>
+    <script src="https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/js/jquery.js" type="text/javascript"></script>
+  </head>
+  <body>
+  
+  <!--Style for map-->
+  <style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+	
+	img{
+   display: none
+}
+span:hover + img{
+   display: block;
+}
+#im1{
+width:1000px;
+height:550px;
+}
+</style>
+  <!--End style for map-->
+  
+    <div id="page">
+      <div class="header">
+        <div id="title">
+          <p style="font-size: 22px "><b>Mason Educational Flood Forecast System</b></p>
+         <h5 style=" color:white">
+            <em>Powered by the Mason Flood Hazards Research Lab</em>
+          </h5>
+        </div>
+        <h2 id="mason-logo">
+          <a href="http://www.gmu.edu">George Mason University</a>
+        </h2>
+        <form method="get" action="http://search1.gmu.edu/search" id="search-form">
+          <div><label for="search">Search: </label><input type="text" name="q" id="search" maxlength="600" /> <input type="image" alt="Go" title="Go" src="main_page_images/search-box/go-button.gif" /><input type="hidden" name="site" value="mason_test" /><input type="hidden" name="client" value="mason_test" /><input type="hidden" name="proxystylesheet" value="mason_test" /><input type="hidden" name="output" value="xml_no_dtd" /></div>
+        </form>
+      </div>
+	  <div>
+	 
+	  </div>
+      <div class="tabs">
+		<ul>
+         <li class="active">
+            <a href="https://masonfloodhazardsresearchlab.github.io/index.html">Home</a>
+			<ul>
+               <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/index.html">Chesapeake Bay Research page</a>
+              </li>
+              <li>
+                <a href="https://slawler.github.io/nwm_pages/nwm_data_page.html">Tidal Water Prediction System</a>
+              </li>
+              <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/potomac_total_water/index.html">Washington, DC Flood Forecast System</a>
+              </li>
+				 <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html">Potomac River Flood Forecast System powered by ADCIR</a>
+              </li>
+		<li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/Mason_Watershed/index.html">Mason Watershed Flood Forecast System powered by HEC-RAS & HEC-HMS</a>
+              </li>
+			  
+            </ul>
+            
+          </li>
+          <li>
+            <a href="map.html">Map</a>
+           
+          </li>
+		   <li>
+            <a href="movie.html">Movie</a>
+           
+          </li>
+		   <li>
+            <a href="GIS.html">GIS</a>
+           
+          </li>
+		   <li>
+            <a href="data.html">Data</a>
+           
+          </li>
+		  <li>
+            <a href="models.html">Models</a>
+           
+          </li>
+		 
+          <li>
+            <a href="http://frg.vse.gmu.edu/">Our Lab</a>
+            
+          </li>
+         
+         
+        </ul>
+      </div>
+      <div class="column-row-adjacent">
+        <div class="column-1-1">
+<!--InstanceBeginEditable name="intro-photo" -->
+		 <p style="font-size: 15px"><b>
+<br/>
+iFLOOD: Chesapeake Bay Flood Forecast System powered by ADCIRC</b>
+</p>
+<p><b>Change text!! .. </b>The products provided here are for educational and scientific research only and should not be used for decision making in its present form. The models, methods and results published here are under constant testing, development and subject to educational and training exercises on real time.</p>
+<br/>
+<!--InstanceEndEditable -->
+        </div>
+      </div>
+   <br/><br/>
+  <!--Main elements of page.. main body comes below-->
+  
+  <h4>Testing web hosting for the Chesapeake Bay Flood Forecasting System</h4>
+  
+<p>Water Level Predictions @ Chesapeake Bay</p>
+<div>
+<h3 style="color: red"> This is under construction</h3>
+</div> 
+<div id='map'>
+
+
+</div>
+  
+  <!--End of main body content-->
+<br/><br/>
+	  
+	  
+      <div class="footer">
+	  <div>
+				
+<div >
+			<p ><b style='color:red'>Disclaimer: </b><br/>
+			The products provided here are for educational and scientific research only and should not be used for decision making in its present form. The models, methods and results published here are under constant testing, development and subject to educational and training exercises on real time.
+			</p>
+			</div>
+		</div>
+		<p>
+					<b><br />Social Connect!</b>
+				</p>
+			
+			 
+			<p > 
+			<a href="http://www.facebook.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on facebook"><img alt="follow me on facebook" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" /></a>
+			<span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+			<a href="https://www.youtube.com/channel/UCXExJRbcZMkS6J1L3rWv7Dw" style="line-height: 1.4;" target="_blank" title="follow me on youtube"><img alt="follow me on youtube" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" /></a><span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp;&nbsp;</span>
+			<span style="line-height: 1.4;">&nbsp;&nbsp;</span>
+			<a href="http://www.instagram.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on instagram"><img alt="follow me on instagram" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" /></a>
+			<span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+			<a href="https://twitter.com/FerreiraGMU" style="line-height: 1.4;" target="_blank" title="follow me on Twitter"><img alt="follow me on twitter" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/twiiter30x30.png" /></a>&nbsp; &nbsp;
+			<a href="https://github.com/GMU-FerreiraResearchGroup" target="_blank"><img alt="" src="http://frg.vse.gmu.edu/documents/882235/962585/GitHub_Logo.png/21697fa0-6f7e-4760-b52f-267cdf3ed7c9?t=1434735565858" style="width: 80px; height: 33px;" /></a>
+			</p> 
+        
+        <p>Copyright Â© 2017 George Mason University</p>
+      </div>
+    </div>
+<script type="text/javascript">
+function confirm_alert(node) {
+    return confirm("Information: The data is a prediction on educational studies of past and present condition. Cannot be treated as real");
+}
+</script>
+<!--Script for map-->
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZmxvb2RoYXphcmRzbGFiIiwiYSI6ImNqMWk0bmhwazAxOGkzMm9oMWUwY3B4dWIifQ.ERRwg_dyfb5DDf1piUoTPg';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [-77.04, 38.907],
+    zoom: 6.00
+});
+map.on('load', function() {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Bishops Head, MD</strong><p>Bishops Head, MDBISM2</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.036183, 38.216639]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Annapolis, MD</strong><p>Annapolis, MD</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.479876450000, 38.986885860000]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Solomons Island, MD</strong><p>Solomons Island, MD</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.449921330000, 38.315748310000]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Kiptopeke, VA</strong><p>Kiptopeke, VA</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-75.995395910000, 37.163433530000]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Sewells Point, VA</strong><p>Sewells Point, VA</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.335476530000, 36.950165530000]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Baltimore, MD</strong><p>bla bla</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.577572, 39.266101]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Chesapeake Bay Bridge Tunnel</strong><p>Chesapeake Bay Bridge Tunne</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.123066553300 , 36.964541507100]
+                    }
+                }]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+});
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+map.on('mousemove', function(e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+    if (!features.length) {
+        popup.remove();
+        return;
+    }
+    var feature = features[0];
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    popup.setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+</script>
+
+
+<!--End of script for map-->
+
+  </body>
+<!-- InstanceEnd -->
+</html>
