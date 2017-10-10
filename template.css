@@ -1,0 +1,958 @@
+/* --------------------------------------
+   Mason Template v. 1.2
+   Designed by Josh Hughes, 
+   Web Communications <josh@deaghean.com>
+   -------------------------------------- */
+
+/* @group Basic HTML Styling */
+
+body 
+{
+	background: #fff;
+	color: #333;
+	font: 75% Verdana, Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0 0 10px 0;
+	width: 100%;
+}
+
+p, ul, ol, dl, pre, h1, h2, h3, h4, h5, h6, dd, address, blockquote, table, fieldset 
+{
+	margin: 0 0 12px 0;
+	padding: 0;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 
+{
+	font: bold 1.2em "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+}
+
+h1 
+{
+	font-size: 2.8em;
+	color: #063;
+}
+
+h2 
+{
+	font-size: 2.4em;
+	color: #930;
+}
+
+h3 
+{
+	font-size: 2em;
+}
+
+h4 
+{
+	font-size: 1.6em;
+}
+
+h5 
+{
+	font-size: 1.2em;
+}
+
+h6 
+{
+	font: bold 1.1em "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	margin: 0 0 6px 0;
+}
+
+/* Links */
+
+a, a:link 
+{
+	color: #063;
+}
+
+a:hover, a:active 
+{
+	color: #0a3e24;
+}
+
+a:visited 
+{
+	color: #063;
+}
+
+/* Lists */
+
+ul, ol 
+{
+	padding: 0 0 0 20px;
+}
+
+ul 
+{
+	list-style: square;
+}
+
+li 
+{
+	margin: 0 0 3px 0;
+}
+
+ul ul, ul ol, ol ul, ol ol 
+{
+	margin: 0;
+}
+
+ul ul, ol ul 
+{
+	list-style: circle;
+}
+
+/* Tables */
+
+table.data-table
+{
+	border-top: 2px solid #ccc;
+	border-left: 2px solid #ccc;
+}
+
+table.data-table td, table.data-table th 
+{
+	border-right: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	vertical-align: top;
+}
+
+table.data-table tfoot td,
+table.data-table tfoot th 
+{
+	border: 0;
+	font-size: 0.8em;
+	color: #666;
+}
+
+table.data-table td, table.data-table th, table.data-table caption 
+{
+	padding: 5px;
+}
+
+table.data-table th, table.data-table caption 
+{
+	text-align: left;
+}
+
+/* Forms */
+
+form
+{
+	margin: 0;
+	padding: 0;
+}
+
+fieldset 
+{
+	border: 2px solid #ccc;
+	padding: 6px 12px 12px 12px;
+}
+
+legend 
+{
+	font: bold 1.6em "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #063;
+}
+
+input[type=text], input.text, textarea 
+{
+	border: 2px solid #ccc;
+	padding: 6px;
+}
+
+/* Code */
+
+code, pre, samp, var, kbd 
+{
+	font: 1em Consolas, Monaco, "Courier New", Courier, mono;
+}
+
+code 
+{
+	border-left: 5px solid #ccc;
+	padding-left: 10px;
+	display: block;
+}
+
+/* Random Block Elements */
+
+hr 
+{
+	border: 0;
+	border-top: 2px solid #ccc;
+	margin: 4px 0 0 0;
+	padding: 0 0 8px 0;
+}
+
+address 
+{
+	font-style: normal;
+}
+
+dt 
+{
+	font-weight: bold;
+}
+
+/* Random Inline Elements */
+
+acronym, abbr 
+{
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+
+del 
+{
+	color: #900;
+	text-decoration: line-through;
+}
+
+img
+{
+	border: 0;
+}
+
+ins 
+{
+	color: #063;
+	text-decoration: none;
+}
+
+dfn 
+{
+	font-weight: bold;
+	font-style: normal;
+}
+
+cite 
+{
+	font-style: italic;
+}
+
+/* @end */
+
+/* @group Page Container */
+
+#page 
+{
+	width: 780px;
+	margin: auto;
+	position: relative;
+}
+
+/* @end */
+
+/* @group Header */
+
+/* Header Background */
+
+.header 
+{
+	position: relative;
+	color: #fff;
+	width: 96%;
+	width: 760px;
+	float: left;
+	margin: 0 10px;
+	display: inline;
+	background: url(../main_page_images/header/green-background.gif) repeat-x #125735;
+	border-top: 4px solid #125735;
+}
+
+.header.no-tabs
+{
+	border-bottom: 4px solid #0a3e24;
+}
+
+/* Page Title */
+
+.header #title 
+{
+	width: 550px;
+	padding: 52px 10px 15px 20px;
+	float: right;
+	background: url(../main_page_images/header/green-divider.gif) no-repeat;
+}
+
+.header #title.no-search
+{
+	padding-top: 35px;
+}
+
+.header.reverse #title 
+{
+	float: left;
+	background: none;
+	width: 540px;
+}
+
+.header #title h1 
+{
+	margin: 0 0 3px 0;
+}
+
+.header #title h2 
+{
+	font-size: 1.8em;
+	margin: 0 0 5px 0;
+}
+
+.header #title a 
+{
+	text-decoration: none;
+}
+
+.header #title h1, 
+.header #title a 
+{
+	color: #fff;
+}
+
+.header #title h2,
+.header #title a:hover 
+{
+	color: #fff;
+}
+
+/* Mason Logo */
+
+.header #mason-logo 
+{
+	margin: 0;
+	float: left;
+	height: 115px;
+	width: 175px;
+	background: url(../main_page_images/header/green-mason-logo.gif) no-repeat 15px 0px;
+}
+
+.header.reverse #mason-logo 
+{
+	float: right;
+	background-position: 0px 0;
+}
+
+.header #mason-logo a 
+{
+	height: 115px;
+	text-indent: -5000px;
+	overflow: hidden;
+	display: block;
+	width: 175px;
+}
+
+/* Search Form */
+
+#search-form div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 15px 5px 60px;
+	left: auto;
+	background: url(../main_page_images/search-box/green-curve-right.gif) no-repeat #125735;
+}
+
+.reverse #search-form div
+{
+	right: auto;
+	left: 0;
+	background: url(../main_page_images/search-box/green-curve-left.gif) no-repeat top right #125735;
+	padding: 2px 60px 5px 15px;
+}
+
+#search-form input, #search-form span, #search-form label 
+{
+	vertical-align: middle;
+}
+
+#search-form label 
+{
+	font-weight: bold;
+	font: bold 1.2em "Trebuchet MS", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+#search 
+{
+	border: 2px solid #0a3e24;
+	padding: 3px;
+	width: 130px;
+}
+
+/* @end */
+
+/* @group White Header */
+
+/* Header Background */
+
+.white .header 
+{
+	background: #fff;
+}
+
+/* Page Title */
+
+.white .header #title 
+{
+	background-image: url(../main_page_images/header/white-divider.gif);
+	width: 568px;
+}
+
+.white .header.reverse #title
+{
+	background: 0;
+	padding-left: 0;
+}
+
+.white .header #title h1, 
+.white .header #title a 
+{
+	color: #063;
+}
+
+.white .header #title h2,
+.white .header #title a:hover 
+{
+	color: #666;
+}
+
+.white .header.no-tabs
+{
+	border: 0;
+}
+
+/* Mason Logo */
+
+.white .header #mason-logo 
+{
+	width: 155px;
+	background: url(../main_page_images/header/white-mason-logo.gif) no-repeat 0 0;
+	padding: 0;
+}
+
+.white .header #mason-logo a
+{
+	width: 155px;
+}
+
+/* Search Form */
+
+.white .header #search-form div
+{
+	background-image: url(../main_page_images/search-box/white-curve-right.gif);
+}
+
+.white .header.reverse #search-form div 
+{
+	background-image: url(../main_page_images/search-box/white-curve-left.gif);
+}
+
+/* @end */
+
+/* @group Tabs */
+
+.tabs 
+{
+	float: left;
+	background: url(../main_page_images/tabs/tan-background.gif) repeat-x bottom left #fffcdf;
+	border-bottom: 1px solid #c3af78;
+	position: relative;
+	width: 760px;
+	clear: both;
+	margin: 0 10px;
+	display: inline;
+	 height:35px; 
+ 
+}
+
+.tabs.adjacent
+{
+	margin-bottom: 0;
+}
+
+.tabs ul 
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+	position: relative;
+	border-left: 1px solid #c3af78;
+	border-right: 1px solid #c3af78;
+	width: 758px;
+}
+
+.tabs ul li 
+{
+	float: left;
+	font: bold 14px "Trebuchet MS", Helvetica, Arial, sans-serif;
+	padding: 0 1px 0 0;
+	margin: 0;
+	background: url(../main_page_images/tabs/tan-divider.gif) no-repeat bottom right;
+	position: relative;
+}
+
+.tabs ul li.last 
+{
+	background: none;
+}
+
+.tabs ul li a 
+{
+	color: #063;
+	text-decoration: none;
+	padding: 13px 14px 7px 12px;
+	display: block;
+}
+
+.tabs ul li a:hover,
+.tabs ul li.active a 
+{
+	color: #0a3e24;
+	background: url(../main_page_images/tabs/tan-highlight.gif) bottom left repeat-x #fffeef;
+}
+
+/* For editing purposes */
+
+.tabs-edit
+{
+	clear: both;
+	padding-top: 15px;
+}
+
+.tabs-edit ul li
+{
+	font-weight: bold;
+}
+
+.tabs-edit ul ul li
+{
+	font-weight: normal;
+}
+
+/* @end */
+
+/* @group Tan Tabs on White */
+
+.white .tabs ul 
+{
+	border-top: 1px solid #c3af78;
+}
+
+/* @end */
+
+/* @group Green Tabs */
+
+.tabs.green
+{
+	background: url(../main_page_images/tabs/green-background.gif) repeat-x #287c52;
+	border-bottom: 2px solid #115533;
+}
+
+.tabs.green ul 
+{
+	border-left: 2px solid #115533;
+	border-right: 2px solid #115533;
+	width: 756px;
+}
+
+.tabs.green ul li 
+{
+	padding: 0;
+	border-right: 2px solid #115533;
+	background: 0;
+	color: #fff;
+}
+
+.tabs.green ul li.last 
+{
+	border: 0;
+}
+
+.tabs.green ul li a 
+{
+	color: #fff;
+}
+
+.tabs.green ul li a:hover 
+{
+	color: #ffc;
+	background: url(../main_page_images/tabs/green-highlight.gif) repeat-x #296548;
+}
+
+.tabs.green ul li.active a 
+{
+	background: url(../main_page_images/tabs/green-highlight.gif) repeat-x #296548;
+	color: #fff;
+	bottom: 0;
+	padding-top: 13px;
+	padding-bottom: 7px;
+	margin-top: 0;
+}
+
+.tabs.green ul li.active a:hover
+{
+	color: #ffc;
+}
+
+.tabs.green ul li.active.first span 
+{
+	padding: 0;
+	border-left: 0;
+}
+
+/* @end */
+
+/* @group Green Tabs on White */
+
+.white .tabs.green ul 
+{
+	border-top: 2px solid #115533;
+}
+
+/* @end */
+
+/* @group Dropdown Menus */
+
+.tabs ul ul,
+.tabs.green ul ul
+{
+	position: absolute;
+	left: -999em;
+	top: 100%;
+	background: #fff;
+	z-index: 1000;
+	border: 1px solid #c3af78;
+	border-bottom: 0;
+	margin: 0 0 0 -1px;
+	width: auto;
+	height: auto;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+.tabs ul ul li,
+.tabs.green ul ul li
+{
+	float: none;
+	height: auto;
+	background-color: #fff;
+	position: relative;
+	z-index: 2000;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #c3af78;
+	border-right: 0;
+	white-space: nowrap;
+}
+
+.tabs ul ul li a,
+.tabs ul li.active ul li a,
+.tabs.green ul ul li a,
+.tabs.green ul li.active ul li a
+{
+	height: auto;
+	border: 0;
+	color: #063;
+	padding: 5px;
+	background: #fff;
+	float: none;
+}
+
+.tabs ul ul li a:hover,
+.tabs ul li.active ul li a:hover,
+.tabs.green ul ul li a:hover,
+.tabs.green ul li.active ul li a:hover
+{
+	background: url(../main_page_images/tabs/dropdown-highlight.gif) repeat-x bottom left #fffce4;
+	color: #000;
+}
+
+.tabs ul li:hover ul, 
+.tabs ul li.hover ul
+{
+	left: auto;
+}
+
+.tabs.green ul ul,
+.tabs.green ul ul li
+{
+	border-color: #153;
+}
+
+.tabs.green ul ul
+{
+	border-top-width: 2px;
+	margin-left: -2px;
+}
+
+.tabs.green ul ul li.last 
+{
+	border-bottom: 1px solid #153;
+}
+
+.white .tabs ul ul,
+.white .tabs.green ul ul
+{
+	width: auto;
+}
+
+/* @end */
+
+/* @group Columns and Rows */
+
+/* Rows */
+
+.column-row,
+.column-row-adjacent 
+{
+	width: 100%;
+	float: left;
+	clear: both;
+	padding-top: 20px;
+}
+
+.column-row-adjacent 
+{
+	padding: 0;
+}
+
+/* Columns */
+
+.column-1-1,
+.column-1-2,
+.column-1-3,
+.column-1-4,
+.column-2-3,
+.column-3-4
+{
+	float: left;
+	display: inline;
+	margin: 0 10px;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+
+.column-row-adjacent .column-1-1,
+.column-row-adjacent .column-1-2,
+.column-row-adjacent .column-1-3,
+.column-row-adjacent .column-1-4,
+.column-row-adjacent .column-2-3,
+.column-row-adjacent .column-3-4
+{
+	padding-bottom: 0;
+}
+
+.column-1-1
+{
+	width: 760px;
+	float: none;
+	display: block;
+}
+
+.column-1-2 
+{
+	width: 370px;
+}
+
+.column-1-3 
+{
+	width: 240px;
+}
+
+.column-1-4 
+{
+	width: 175px;
+}
+
+.column-2-3 
+{
+	width: 500px;
+}
+
+.column-3-4 
+{
+	width: 565px;
+}
+
+/* @end */
+
+/* @group Vertical Menu */
+
+.menu ul 
+{
+	padding: 0;
+	list-style: none;
+	border-top: 2px solid #b2d4c6;
+}
+
+.menu ul li 
+{
+	font: bold 1.2em "Trebuchet MS", Helvetica, Arial, sans-serif;
+	margin: 0;
+	border-bottom: 2px solid #b2d4c6;
+	background: #e9f3ef;
+}
+
+.menu ul li a 
+{
+	display: block;
+	padding: 3px 2px 3px 6px;
+	text-decoration: none;
+}
+
+.menu ul li a:hover,
+.menu ul li.active a
+{
+	background: #fff;
+}
+
+.menu ul ul
+{
+	padding: 0;
+	list-style: none;
+	font-size: 1em;
+	border-top: 1px solid #b2d4c6;
+	background: #fff;
+}
+
+.menu ul ul li
+{
+	font: bold 75% Verdana, Helvetica, Arial, sans-serif;
+	padding: 0;
+	border: 0;
+	border-top: 1px solid #b2d4c6;
+	background: none;
+}
+
+.menu ul ul li a:hover
+{
+	background: #fff;
+}
+
+.menu ul ul ul li
+{
+	font-size: 1em;
+}
+
+/* @end */
+
+/* @group News Box */
+
+.newsbox 
+{
+	border: 1px solid #b39f66;
+	padding: 8px 8px 0 8px;
+	background: url(../main_page_images/news-box/tan-background.gif) repeat-x #ffedb6;
+	font-size: 0.95em;
+	margin-bottom: 15px;
+}
+
+.newsbox ul a 
+{
+	font-weight: bold;
+}
+
+.newsbox ul 
+{
+	margin-bottom: 12px;
+}
+
+.newsbox li 
+{
+	margin-bottom: 3px;
+}
+
+.newsbox h3 
+{
+	color: #930;
+	font-size: 1.4em;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #b39f66;
+}
+
+/* @end */
+
+/* @group Footer */
+
+.footer 
+{
+	text-align: center;
+	color: #666;
+	font-size: 0.95em;
+	padding-top: 10px;
+	border-top: 1px solid #e8e8e8;
+	width: 760px;
+	clear: both;
+	margin: 0 10px;
+}
+
+.footer p 
+{
+	margin-bottom: 5px;
+}
+
+.footer a 
+{
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.footer a:hover 
+{
+	color: #000;
+}
+
+/*
+
+ @end */
+
+/* @group Special Classes */
+
+.left-align 
+{
+	float: left;
+	margin: 0 12px 12px 0;
+}
+
+.right-align 
+{
+	float: right;
+	margin: 0 0 12px 12px;
+}
+
+.hidden
+{
+	display: none;
+}
+
+/* @end */
+
+/* @group Print */
+
+@media
+print 
+{
+	.column-1-1,
+	.column-1-2,
+	.column-1-3,
+	.column-1-4,
+	.column-2-3,
+	.column-3-4,
+	.footer
+	{
+		float: none;
+		display: block;
+	}
+}
+
+/* @end */

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<GroundOverlay>
+	<name>mb_b2</name>
+	<visibility>0</visibility>
+	<drawOrder>99</drawOrder>
+	<Icon>
+		<href>go_Layers_01.png</href>
+	</Icon>
+	<LatLonBox>
+		<north>41.0971005217804</north>
+		<south>40.9757316287441</south>
+		<east>-73.79670530802621</east>
+		<west>-73.9835642299016</west>
+	</LatLonBox>
+</GroundOverlay>
+</kml>
