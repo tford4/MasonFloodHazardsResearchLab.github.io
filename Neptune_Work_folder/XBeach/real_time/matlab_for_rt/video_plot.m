@@ -8,7 +8,7 @@ xbo2=xbo.data(1).value;
 
 date1=datetime('now');
 delta_t=datenum(date1);
-delta_t=delta_t-hours(2);
+delta_t=delta_t-hours(6);
 delta_t2(1:216)=delta_t+minutes(1:20:4320);
 
 %%
@@ -24,7 +24,7 @@ delta_t2(1:216)=delta_t+minutes(1:20:4320);
  end
 
 for i=1
-    for ii=1:787
+    for ii=1:499
         if zb(i,ii)>.05
             veg_h(i,ii)=.15;
         end
@@ -35,7 +35,7 @@ for i=1
             veg_h(i,ii)=0;
         end
         if zb(i,ii)>1.25
-            veg_h(i,ii)=.1;
+            veg_h(i,ii)=.05;
         end
     end
 end
@@ -44,7 +44,7 @@ vid_path=('/home/vse/Neptune_Work_folder/XBeach/real_time/figures/');
 cd(vid_path);
 video=VideoWriter('xbeach_mgb');
 
-video.FrameRate=4;
+video.FrameRate=4.5;
 open(video);
 t_end=length(t);
 

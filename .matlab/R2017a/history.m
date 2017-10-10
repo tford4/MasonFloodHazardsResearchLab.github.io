@@ -63,3 +63,8 @@ run video_plot.m
 run /home/vse/Neptune_Work_folder/XBeach/real_time/matlab_for_rt/video_plot.m
 exit
 %%-- 10/07/2017 07:19:09 PM --%%
+%%-- 10/10/2017 10:34:02 AM --%%
+%%-- 10/10/2017 11:07:43 AM --%%
+run video_plot.m
+exit
+%%-- 10/10/2017 11:28:04 AM --%%

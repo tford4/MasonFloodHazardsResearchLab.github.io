@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% XBeach parameter settings input file                                     %%%
 %%%                                                                          %%%
-%%% date:     03-Oct-2017 20:07:56                                           %%%
+%%% date:     10-Oct-2017 10:27:26                                           %%%
 %%% function: xb_write_params                                                %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -23,7 +23,7 @@ bedfricfile   = bedfricfile.txt
 avalanching   = 0
 dtheta_s      = 5
 single_dir    = 0
-tidelen       = 72
+tidelen       = 84
 vegetation    = 1
 veggiefile    = vegetation.txt
 veggiemapfile = spartina_tran.txt
@@ -32,7 +32,7 @@ veggiemapfile = spartina_tran.txt
 
 depfile       = bed.dep
 posdwn        = -1
-nx            = 786
+nx            = 498
 ny            = 0
 alfa          = 0
 vardx         = 1
@@ -55,7 +55,7 @@ mpiboundary   = auto
 %%% Model time %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 tstop         = 259200
-CFL           = 0.700000
+CFL           = 0.650000
 
 %%% Morphology parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -64,7 +64,7 @@ morstart      = 0
 
 %%% Sediment transport parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-facua         = 0.200000
+facua         = 0.300000
 
 %%% Tide boundary conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
