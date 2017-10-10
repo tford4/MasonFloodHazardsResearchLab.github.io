@@ -1,0 +1,236 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+	width	: 100%;
+	height	: 500px;
+}																		
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+<!-- <div>
+<p></p>
+
+</div><div>
+<p></p>
+
+</div>	
+<div>
+<p> Water Level Predictions @ WASD2</p>
+
+</div>
+<div>
+<p> Potomac Model Forecasted Water levels 06/08/2017 1300 </p>
+
+</div> 
+
+<!-- Chart code -->
+<!-- <script>
+var chart = AmCharts.makeChart("chartdiv", {
+    "type": "serial",
+    "theme": "light",
+    "marginTop":0,
+    "marginRight": 80,
+    "dataProvider": [{
+        "year": "1300",
+        "value": 0.274944037
+    }, {
+        "year": "1400",
+        "value": 0.143902883
+    }, {
+        "year": "1500",
+        "value": 0.035326697
+    }, {
+        "year": "1600",
+        "value": -0.06030862
+    }, {	    
+        "year": "1700",
+        "value": -0.141494408
+    }, {
+        "year": "1800",
+        "value": -0.20340389
+    }, {
+        "year": "1900",
+        "value": -0.176163465
+    }, {
+        "year": "2000",
+        "value": -0.034212325
+    
+    }],
+    "valueAxes": [{
+        "axisAlpha": 0,
+        "position": "left"
+    }],
+    "graphs": [{
+        "id":"g1",
+        "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]]</span></b>",
+        "bullet": "round",
+        "bulletSize": 8,
+        "lineColor": "#d1655d",
+        "lineThickness": 2,
+        "negativeLineColor": "#7CB663",
+        "type": "smoothedLine",
+        "valueField": "value"
+    }],
+    "chartScrollbar": {
+        "graph":"g1",
+        "gridAlpha":0,
+        "color":"#888888",
+        "scrollbarHeight":55,
+        "backgroundAlpha":0,
+        "selectedBackgroundAlpha":0.1,
+        "selectedBackgroundColor":"#888888",
+        "graphFillAlpha":0,
+        "autoGridCount":true,
+        "selectedGraphFillAlpha":0,
+        "graphLineAlpha":0.2,
+        "graphLineColor":"#c2c2c2",
+        "selectedGraphLineColor":"#888888",
+        "selectedGraphLineAlpha":1
+
+    },
+    "chartCursor": {
+        "categoryBalloonDateFormat": "YYYY",
+        "cursorAlpha": 0,
+        "valueLineEnabled":true,
+        "valueLineBalloonEnabled":true,
+        "valueLineAlpha":0.5,
+        "fullWidth":true
+    },
+    "dataDateFormat": "YYYY",
+    "categoryField": "year",
+    "categoryAxis": {
+        "minPeriod": "YYYY",
+        "parseDates": true,
+        "minorGridAlpha": 0.1,
+        "minorGridEnabled": true
+    },
+    "export": {
+        "enabled": true
+    }
+});
+
+chart.addListener("rendered", zoomChart);
+if(chart.zoomChart){
+	chart.zoomChart();
+}
+
+function zoomChart(){
+    chart.zoomToIndexes(Math.round(chart.dataProvider.length * 0.4), Math.round(chart.dataProvider.length * 0.55));
+}
+
+</script>
+
+-->
+
+<div>
+<p> Water Level Predictions @ LWX2</p>
+
+</div>
+<div>
+<p> Potomac Model Forecasted Water levels 06/08/2017 1300 </p>
+
+</div>
+
+<!-- Chart code -->
+<script>
+var chart = AmCharts.makeChart("chartdiv", {
+    "type": "serial",
+    "theme": "light",
+    "marginTop":0,
+    "marginRight": 80,
+    "dataProvider": [{
+        "year": "1300",
+        "value": 0.274944037
+    }, {
+        "year": "1400",
+        "value": 0.143902883
+    }, {
+        "year": "1500",
+        "value": 0.035326697
+    }, {
+        "year": "1600",
+        "value": -0.06030862
+    }, {	    
+        "year": "1700",
+        "value": -0.141494408
+    }, {
+        "year": "1800",
+        "value": -0.20340389
+    }, {
+        "year": "1900",
+        "value": -0.176163465
+    }, {
+        "year": "2000",
+        "value": -0.034212325
+    
+    }],
+    "valueAxes": [{
+        "axisAlpha": 0,
+        "position": "left"
+    }],
+    "graphs": [{
+        "id":"g1",
+        "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]]</span></b>",
+        "bullet": "round",
+        "bulletSize": 8,
+        "lineColor": "#d1655d",
+        "lineThickness": 2,
+        "negativeLineColor": "#6392B6",
+        "type": "smoothedLine",
+        "valueField": "value"
+    }],
+    "chartScrollbar": {
+        "graph":"g1",
+        "gridAlpha":0,
+        "color":"#888888",
+        "scrollbarHeight":55,
+        "backgroundAlpha":0,
+        "selectedBackgroundAlpha":0.1,
+        "selectedBackgroundColor":"#888888",
+        "graphFillAlpha":0,
+        "autoGridCount":true,
+        "selectedGraphFillAlpha":0,
+        "graphLineAlpha":0.2,
+        "graphLineColor":"#c2c2c2",
+        "selectedGraphLineColor":"#888888",
+        "selectedGraphLineAlpha":1
+
+    },
+    "chartCursor": {
+        "categoryBalloonDateFormat": "YYYY",
+        "cursorAlpha": 0,
+        "valueLineEnabled":true,
+        "valueLineBalloonEnabled":true,
+        "valueLineAlpha":0.5,
+        "fullWidth":true
+    },
+    "dataDateFormat": "YYYY",
+    "categoryField": "year",
+    "categoryAxis": {
+        "minPeriod": "YYYY",
+        "parseDates": true,
+        "minorGridAlpha": 0.1,
+        "minorGridEnabled": true
+    },
+    "export": {
+        "enabled": true
+    }	
+});
+chart.addListener("rendered", zoomChart); 
+if(chart.zoomChart){
+	chart.zoomChart();
+}
+
+function zoomChart(){
+    chart.zoomToIndexes(Math.round(chart.dataProvider.length * 0.4), Math.round(chart.dataProvider.length * 0.55));
+}	
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
