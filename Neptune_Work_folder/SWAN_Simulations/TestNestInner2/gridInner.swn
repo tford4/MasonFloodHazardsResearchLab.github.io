@@ -1,0 +1,86 @@
+PROJ 'gridInner' 'ca01' 
+$ 
+SET level=1.00  NAUTICAL 
+COORDINATES CARTESIAN  
+$ ------------------------------------------------------------------------------
+$
+$ **** COMMANDS FOR MODEL DESCRIPTION ******************************************
+$ ------------------------------------------------------------------------------
+$ CGRID ->REG XPC YPC ALPC XLENC YLENC MXC MYC ->CIRC  MDC  FLOW FHIGH  MSC 
+CGRID   412218.6250  4104046.2500 338 6295 6780 315 339  CIRCLE  72 0.0345 1.00  34 
+$
+$ ------------------------------------------------------------------------------
+$
+$ **** COMMANDS FOR INPUT FIELDS ***********************************************
+$ ------------------------------------------------------------------------------
+$ INPGRID BOTTOM  REGULAR xpinp ypinp alpinp mxinp myinp dxinp dyinp 
+INPGRID   BOTTOM  REGULAR 412000  4101500 0 980 918 10 10 
+$
+$ READINP BOTTOM fac idla 
+$
+$
+READINP BOTTOM -1 'topo_10m.dat' 1 0 FREE 
+$
+$ ------------------------------------------------------------------------------
+$
+$ **** COMMANDS FOR INPUT BOUNDARY/INITIAL CONDITIONS **************************
+$ ------------------------------------------------------------------------------ 
+$ NO WIND 
+BOUN NEST 'boundary.dat'  
+$ 
+$BOUN  SIDE E CON PAR 1 7 180 30 
+$BOUN  SIDE S CON PAR 3 7 180 30
+$
+$ ------------------------------------------------------------------------------
+$
+$ **** COMMANDS FOR PHYSICS pagina 30 ******************************************
+$ ------------------------------------------------------------------------------
+$ 
+BREAKING
+OFF QUAD
+OFF WCAP
+GEN1
+FRICTION JONSWAP CON
+$ 
+$
+$ ------------------------------------------------------------------------------
+$
+$ **** COMMANDS FOR OUTPUT REQUESTS pagina 40 **********************************
+$ ------------------------------------------------------------------------------
+$
+$Station Nantucket. Location No. punto fuera bahia
+OUTPut OPTions TAB 16 
+POINT   'point1' 414412  4108535 
+$401817  4099595
+$
+BLOCK   'COMPGRID' NOHEADER 'batimetria.dep'       
+$ specout pagina 92
+$ SPECOUT 'fuera' SPEC1D 'fuera_1D.spc' &
+$                 OUTPUT 19971001.000000 1. HR
+$ TABLE   'fuera' NOHEADER 'fuera.hs'       HS  
+$
+TABLE 'COMPGRID' NOHEADER 'acap.lon'       XP 
+TABLE 'COMPGRID' NOHEADER 'acap.lat'       YP 
+TABLE 'COMPGRID' NOHEADER 'acap.dep'       DEPTH 
+TABLE 'COMPGRID' NOHEADER 'acap.hs'        HS
+TABLE 'COMPGRID' NOHEADER 'acap.rtp'        RTP
+TABLE 'COMPGRID' NOHEADER 'acap.mdir'       DIR    
+$NGRID 'nest1' 432146.9898 4579823.582 0 2800 2800 28 28 
+$NESTOUT 'nest1' 'contornos.dat' 
+$BLOCK 'COMPGRID' NOHEAD 'Malla_ext.dat' DEP 3 XP YP HSIGN TM02 RTP DIR
+TABLE 'point1' HEAD 'juan.TBL' Distance DEP HS TM01 DIR XP YP PER PDIR  
+$
+$ ------------------------------------------------------------------------------
+$
+$ **** GENERAL COMMANDS ********************************************************
+$ ------------------------------------------------------------------------------
+$ 
+TEST  1,0 
+$ ------------------------------------------------------------------------------
+$
+$ **** COMPUTE COMMAND *********************************************************
+$ ------------------------------------------------------------------------------
+$
+COMPUTE 
+STOP 
+$ 

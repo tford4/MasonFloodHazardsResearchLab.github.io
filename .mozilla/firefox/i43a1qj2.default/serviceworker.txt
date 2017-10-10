@@ -1,0 +1,8 @@
+6
+
+https://www.cnet.com/bundles/cnetjs/js/libs/
+https://www.cnet.com/bundles/cnetjs/js/libs/ua-push-worker.js
+false
+{3827eaa4-7ac2-4b40-9c2b-32f20fa4796a}
+0
+#
