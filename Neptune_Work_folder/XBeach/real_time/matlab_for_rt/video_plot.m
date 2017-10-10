@@ -8,7 +8,7 @@ xbo2=xbo.data(1).value;
 
 date1=datetime('now');
 delta_t=datenum(date1);
-delta_t=delta_t-hours(6);
+%delta_t=delta_t-hours(6);
 delta_t2(1:216)=delta_t+minutes(1:20:4320);
 
 %%

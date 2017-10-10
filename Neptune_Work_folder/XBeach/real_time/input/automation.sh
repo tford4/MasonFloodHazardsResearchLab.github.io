@@ -1,6 +1,6 @@
 #bin/bash!
 
-ssh fhrl@poseidon.vsnet.gmu.edu 
+#ssh fhrl@poseidon.vsnet.gmu.edu 
 
 scp fhrl@poseidon.vsnet.gmu.edu:/home/fhrl/Documents/XBEACH/WaterLevels_from_Mason_forecast/WLFort63.txt /home/vse/Neptune_Work_folder/XBeach/real_time/tide_from_arslaan/WLFort63.txt  
 
@@ -31,6 +31,8 @@ killall -9 matlab
 
 cd /home/vse/Neptune_Work_folder/XBeach/real_time/figures
 
+rmv xbeach_mgb_movietest.mp4
+
 ffmpeg -i xbeach_mgb.avi xbeach_mgb_movietest.mp4
 
 
@@ -38,13 +40,8 @@ cp /home/vse/Neptune_Work_folder/XBeach/real_time/figures/xbeach_mgb_movietest.m
 
 cd /home/vse/Neptune_Work_folder/XBeach/real_time/figures/MasonFloodHazardsResearchLab.github.io/Xbeach
 
-#git push git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git/Xbeach
 
-#git clone git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
-
-#git set url git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
-
-
+git clone git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
 git remote set-url origin git@github.com:MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io.git
 git pull
 git add --all

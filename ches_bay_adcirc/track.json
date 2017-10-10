@@ -1,7 +1,0 @@
-{
-"type": "FeatureCollection",
-                                                                                
-"features": [
-{ "type": "Feature", "properties": { "STORMNAME": "Maria", "STORMTYPE": "TS", "ADVDATE": "1100 AM AST Thu Sep 28 2017", "ADVISNUM": "50", "STORMNUM": 15.000000, "FCSTPRD": 120.000000, "BASIN": "AL" }, "geometry": { "type": "LineString", "coordinates": [ [ -69.3, 36.8 ], [ -66.7, 36.9 ], [ -62.1, 37.4 ], [ -56.1, 38.8 ], [ -48.8, 41.3 ], [ -31.2, 47.9 ] ] } }
-]
-}
