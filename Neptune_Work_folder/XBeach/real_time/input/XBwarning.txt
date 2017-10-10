@@ -1,6 +1,0 @@
-  Warning: bed friction coefficient values from file 'bedfricfile.txt' will be used in computation
-                      tint =259200.0000 Warning: value > recommended value of100000.0000
-   Unknown, unused or multiple statements of parameterDTHETA_S inparams.txt
-   Unknown, unused or multiple statements of parameterTIDELEN inparams.txt
-   Unknown, unused or multiple statements of parameterZS0 inparams.txt
-   Unknown, unused or multiple statements of parameterMPIBOUNDARY inparams.txt
