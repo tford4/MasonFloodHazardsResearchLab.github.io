@@ -1,5 +1,0 @@
-gpgconf: warning: can not open config file /home/vse/.gnupg/gpg-agent.conf: No such file or directory
-gpgconf: warning: can not open config file /home/vse/.gnupg/gpg-agent.conf: No such file or directory
-gpgconf: error running '/usr/bin/gpg-connect-agent': terminated
-gpgconf: error running '/usr/bin/gpg-connect-agent KILLAGENT': General error
-gpgconf: warning: can not open config file /home/vse/.gnupg/gpg-agent.conf: No such file or directory
