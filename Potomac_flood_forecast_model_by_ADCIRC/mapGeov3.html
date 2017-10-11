@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="initial-scale=1.0">
+  <!--head content for map-->
+  <!-- <meta charset='utf-8' />-->
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <meta charset="utf-8">
+    <title>KML Layers</title>
+    <style>
+		/* Always set the map height explicitly to define the size of the div
+		 * element that contains the map. */
+		#map {
+		  height: 600px;
+      width: 800px;
+		}
+		/* Optional: Makes the sample page fill the window. */
+		html, body {
+		  margin: 0;
+		  padding: 0;
+		}
+	    </style>
+
+<!--InstanceBeginEditable name="head" -->
+<link
+href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/0BpAP9AaQD/ZoczYAAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/AAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/wAAAAAAAAAAQGkA/wAAAAAAAAAAQGkA/0BpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAfppTK0BpAP8AAAAAAAAAAEBpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/AAAAAEBpAP9AaQD/QGkA/wAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAEBpAP8AAAAAQGkA/0BpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP9AaQD/QGkA/wAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAEBpAP9AaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/QGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABC+/v8AAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEL7+/xC+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/EL7+/xC+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7EEL7+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/jj8AAN8/AADbPwAA2z8AANE/AADFPwAAxj8AAM4/AAD/vwAA/38AAP8PAAD/owAA/88AAP/jAAD/+QAA//4AAA=="
+rel="icon" type="image/x-icon" />
+    <title>Mason Educational Flood Forecast System - George Mason University</title>
+    <!--InstanceEndEditable -->
+    <style type="text/css">
+@import url("https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/css/template.css");
+</style>
+
+    <script src="https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/js/jquery.js" type="text/javascript"></script>
+    <script src="https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/js/jquery.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+ <div id="page">
+      <div class="header">
+        <div id="title">
+          <p style="font-size: 22px "><b>Mason Educational Flood Forecast System</b></p>
+         <h5 style=" color:white">
+            <em>Powered by the Mason Flood Hazards Research Lab</em>
+          </h5>
+        </div>
+        <h2 id="mason-logo">
+          <a href="http://www.gmu.edu">George Mason University</a>
+        </h2>
+        <form method="get" action="http://search1.gmu.edu/search" id="search-form">
+          <div><label for="search">Search: </label><input type="text" name="q" id="search" maxlength="600" /> <input type="image" alt="Go" title="Go" src="main_page_images/search-box/go-button.gif" /><input type="hidden" name="site" value="mason_test" /><input type="hidden" name="client" value="mason_test" /><input type="hidden" name="proxystylesheet" value="mason_test" /><input type="hidden" name="output" value="xml_no_dtd" /></div>
+        </form>
+      </div>
+      <div>
+    </div>
+<div class="tabs">
+    <ul>
+         <li class="active">
+            <a href="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html">Home</a>
+      <ul>
+              <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/index.html">Chesapeake Bay Research page</a>
+              </li>
+              <li>
+                <a href="https://slawler.github.io/nwm_pages/nwm_data_page.html">Tidal Water Prediction System</a>
+              </li>
+              <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/potomac_total_water/index.html">Washington, DC Flood Forecast System</a>
+              </li>
+         <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html">Potomac River Flood Forecast System powered by ADCIRC</a>
+              </li>
+    <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/Dogue_Creek_Flood_Forecast_System/index.html">Dogue Creek Flood Forecast System powered by HEC-RAS & SWMM</a>
+              </li>
+        
+            </ul>
+            
+          </li>
+          <li>
+            <a href="plot.html">Plot</a>
+           
+          </li>
+       <li>
+            <a href="movie.html">Movie</a>
+           
+          </li>
+       <li>
+            <a href="GIS.html">GIS</a>
+           
+          </li>
+       <li>
+            <a href="map.html">Map</a>
+           
+          </li>
+      <li>
+            <a href="models.html">Models</a>
+           
+          </li>
+     
+          <li>
+            <a href="http://frg.vse.gmu.edu/">Our Lab</a>
+            
+          </li>
+         
+         
+        </ul>
+      </div>
+      <div class="column-row-adjacent">
+        <div class="column-1-1">
+<!--InstanceBeginEditable name="intro-photo" -->
+     <p style="font-size: 15px"><b>
+<br/>
+iFLOOD: Potomac River Flood Forecast System powered by ADCIRC</b>
+</p>
+<p><b>Mason Flood Forecast </b>The products provided here are for educational and scientific research only and should not be used for decision making in its present form. The models, methods and results published here are under constant testing, development and subject to educational and training exercises on real time.</p>
+<br/>
+
+
+<!--InstanceEndEditable -->
+        </div>
+      </div>
+   <br/><br/>
+<!--Main elements of page.. main body comes below-->
+  
+  <h4> Potomac River Flood Forecast System powered by ADCIRC</h4>
+  
+  <p>Water Level Predictions @ Chesapeake Bay</p>
+<div>
+<h4 style="color: red"> Testing Mode</h4>
+
+<h5 style="color: blue; text-align:right;"> Download <a href="=https://MasonFloodHazardsResearchLab.github.io/master/ches_bay_adcirc/videos/Kalpana.geojson" style="text-decoration:none;color:blue" >(Link) </a> </h5>
+
+
+<h2 style="color: purple; text-align:center;">Maximum Water Levels</h2>
+</div> 
+
+<div id="map" style="top: 0px; left: 5px; width:680px; height:600px; float: left"></div>
+<div class="image">
+        <p>
+          
+        </p>
+      <img src="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/bar.png" style="top: 0px; left: 50px; width:100px; height:600px"> 
+
+</div>
+<div class="clearfix"></div>
+
+        <p> <br>
+          
+        </p>
+
+
+<h2 style="color: green; text-align:center;"> National Hurricane Center <a href="=http://www.nhc.noaa.gov/gtwo.php?basin=atlc&fdays=2" style="text-decoration:none" >(Satellite Imagery) </a> </h2>
+        <div>
+      </div>
+        <p> <br>
+          
+        </p>
+<img src="http://www.nhc.noaa.gov/xgtwo/two_atl_2d0.png" style="top: 0px; left: 5px; width:680px; height:600px; float: left" >
+        <p> <br>     
+
+
+
+
+
+
+
+
+
+
+<!--End of main body content-->
+<br/><br/>
+    
+    
+  <div class="footer">
+    <div>
+        
+<div >
+      <p ><b style='color:red'>Disclaimer: </b><br/>
+      The products provided here are for educational and scientific research only and should not be used for decision making in its present form. The models, methods and results published here are under constant testing, development and subject to educational and training exercises on real time.
+      </p>
+      </div>
+    </div>
+    <p>
+          <b><br />Social Connect!</b>
+        </p>
+      
+       
+      <p > 
+      <a href="http://www.facebook.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on facebook"><img alt="follow me on facebook" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" /></a>
+      <span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+      <a href="https://www.youtube.com/channel/UCXExJRbcZMkS6J1L3rWv7Dw" style="line-height: 1.4;" target="_blank" title="follow me on youtube"><img alt="follow me on youtube" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" /></a><span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp;&nbsp;</span>
+      <span style="line-height: 1.4;">&nbsp;&nbsp;</span>
+      <a href="http://www.instagram.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on instagram"><img alt="follow me on instagram" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" /></a>
+      <span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+      <a href="https://twitter.com/FerreiraGMU" style="line-height: 1.4;" target="_blank" title="follow me on Twitter"><img alt="follow me on twitter" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/twiiter30x30.png" /></a>&nbsp; &nbsp;
+      <a href="https://github.com/GMU-FerreiraResearchGroup" target="_blank"><img alt="" src="http://frg.vse.gmu.edu/documents/882235/962585/GitHub_Logo.png/21697fa0-6f7e-4760-b52f-267cdf3ed7c9?t=1434735565858" style="width: 80px; height: 33px;" /></a>
+      </p> 
+        
+        <p>Copyright Â© 2017 George Mason University</p>
+      </div>
+    </div>
+<script type="text/javascript">
+function confirm_alert(node) {
+    return confirm("Information: The data is a prediction on educational studies of past and present condition. Cannot be treated as real");
+}
+</script>
+
+
+
+
+  </head>
+  <body>
+
+
+  <!--<h1> 
+  Mason Flood Hazards Research
+  <a href="=https://fhrl.vse.gmu.edu">Lab </a> 
+
+  <h3>Test mode: Maximum Water Level </h1>
+     <div>
+     <button onclick="hide_kml();">hide</button>
+     <button onclick="load_kmlLayer();">load kmlLayer </button>
+      
+   </div>-->
+
+<!--<figure>
+    <img src='bar.png' alt='missing' />
+    <figcaption>Caption goes here</figcaption>
+</figure>-->
+
+
+
+
+
+   <script>
+	var map;
+	function initMap() {
+	  map = new google.maps.Map(document.getElementById('map'), {
+	    zoom: 9,
+	    center: {lat: 38.4, lng: -76.725}
+	  });
+ 
+// to turn off the default map settings use
+
+   // navigationControl: false,
+   // mapTypeControl: false,
+   // scaleControl: false,
+   // draggable: false,
+
+// map pointers
+
+
+
+
+
+	// Set the global styles.
+map.data.setStyle(function(feature){
+  var Name = feature.getProperty('Name');
+  
+  var color = "white"
+  if (Name == "Level0") {
+  	color = "#002db3";
+   }
+   if (Name == "Level1") {
+  	color = "#3333ff";
+   } 
+      if (Name == "Level2") {
+  	color = "#0099ff";
+   } 
+      if (Name == "Level3") {
+  	color = "#33ccff";
+   } 
+      if (Name == "Level4") {
+  	color = "#ccff99";
+   } 
+      if (Name == "Level5") {
+  	color = "#bfff00";
+   } 
+         if (Name == "Level6") {
+  	color = "#ffff00";
+   } 
+            if (Name == "Level7") {
+  	color = "#ff751a";
+   } 
+            if (Name == "Level8") {
+  	color = "#ff471a";
+   } 
+             if (Name == "Level9") {
+  	color = "#ff1a1a";
+   } 
+  return {
+    //var color = Name == 'Level1' ? 'blue':'blue';
+  fillColor:color,
+  fillOpacity: 0.65,
+  strokeWeight: 0.05
+  };
+});
+
+	  // NOTE: This uses cross-domain XHR, and may not work on older browsers.
+	  map.data.loadGeoJson(
+	      'https://masonFloodHazardsResearchLab.github.io/ches_bay_adcirc/videos/Kalpana.geojson');
+	}
+
+     function hide_kml(){
+
+            layer.clearLayers();  
+
+   }
+
+   </script>
+
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiVbvW_iR0XpeBe-ojS7NjxMEDkpf0BOA&callback=initMap">
+		</script>
+  </body>
+</html>
