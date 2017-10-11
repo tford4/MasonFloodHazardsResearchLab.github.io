@@ -60,15 +60,16 @@ rel="icon" type="image/x-icon" />
     </div>
 <div class="tabs">
     <ul>
-         <li >
-            <a href="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html">Home</a>
+         <li class="active">
+            <a href="https://masonfloodhazardsresearchlab.github.io/index.html">Home</a>
       <ul>
-                           <li>
+              <li>
                 <a href="https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/home.html">Chesapeake Bay Flood Forecast System powered by ADCIRC + NAM</a>
               </li>
          <li>
                 <a href="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html">Potomac River Flood Forecast System powered by ADCIRC + NAM </a>
               </li>
+
               <li>
                 <a href="https://slawler.github.io/nwm_pages/nwm_data_page.html">Tidal Water Prediction System</a>
               </li>
@@ -83,21 +84,25 @@ rel="icon" type="image/x-icon" />
             </ul>
             
           </li>
+
+
           <li>
             <a href="plot.html">Time Series</a>
            
           </li>
+
+
        <li>
             <a href="movie.html">Animations</a>
            
           </li>
-       <li class="active">
+       <li>
             <a href="map.html">Maps</a>
            
           </li>
        <li>
+            
             <a href="models.html">Models</a>
-           
           </li>
       <li>
             <a href="GIS.html">GIS Data</a>
@@ -115,28 +120,26 @@ rel="icon" type="image/x-icon" />
       <div class="column-row-adjacent">
         <div class="column-1-1">
 <!--InstanceBeginEditable name="intro-photo" -->
-		 <p style="font-size: 17px"><b>
+     <p style="font-size: 17px"><b>
 <br/>
-iFLOOD: Potomac River Flood Forecast System powered by ADCIRC + NAM </b>
+iFLOOD: Potomac River Flood Forecast System powered by ADCIRC + NAM</b>
 </p>
 
 <!--InstanceEndEditable -->
-        </div>
-      </div>
-   <br/><br/>
-  <!--Main elements of page.. main body comes below-->
-  
+
+<!--Main elements of page.. main body comes below-->
 
 <div>
-  
 <!-- For button type in html website /download-->
 
-<form method="get" action="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html" >
-   <button type="submit" style="background:lightblue;cursor:pointer;float: right;text-shadow: initial;" >Maximum Water Level for Model Run</button>
+<form method="get" action="https://raw.githubusercontent.com/MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io/master/ches_bay_adcirc/videos/Kalpana.geojson" >
+   <button type="submit" style="background:lightblue;cursor:pointer;float: right;text-shadow: initial;" >Download</button>
 </form>
 
 
-<p style="color: green;padding-left: 18% ;text-align:center;font-size: 15px">Topo/Bathy</p>
+<p style="color: green; text-align:center;font-size: 15px">Maximum Water Level Forecasted for the next 3.5 days (m)</p>
+
+<p style="color: black; text-align:center;font-size: 10px">Last model run updated at:<span id="myDate"></span><span id="myTime"></span></p>
 </div> 
 
 <div id="map" style="top: 0px; left: 5px; width:660px; height:600px; float: left"></div>
@@ -148,55 +151,50 @@ iFLOOD: Potomac River Flood Forecast System powered by ADCIRC + NAM </b>
         <p>
           
         </p>
-      <img src="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/PRbathylegend.png" style="top: 0px; left: 2.5px; width:120px; height:550px"> 
+      <img src="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/Colorbar-water-levels.png" style="top: 0px; left: 50px; width:100px; height:600px"> 
 
 </div>
 <div class="clearfix"></div>
 
-        <p> <br>
-          
+<!-- NOAA image inserted -->
+        <p style="font-size: 14px;"> <br>
+         <b> Click on the point to access real-time time series forecasts at NHPS/NOAA monitoring stations </b>
         </p>
 
+        <p style="font-size: 14px;text-align: left;"> <br>
+          This system provides flood forecasts for the Potomac River utilizing the hydrodynamic model Advanced Circulation Model (ADCIRC) forced by the atmospheric model North American Mesoscale (NAM) from NOAA. The system is run 4 times a day and provides water level forecasts for 84 hours into the future. The system is based on the numerical mesh especially designed to the potomac River. The forecast automation is based on the ASGS system.
+        </p>
+        <p style="font-size: 14px"> Additional informational about the model set-up is available <a href="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/models.html" style="text-decoration:none;color: darkgreen" >here </a></p>   
 
 
-  <!--End of main body content-->
+<!--End of main body content-->
 <br/><br/>
-<div>
-<h2 style="color: green; text-align:center;"> National Hurricane Center <a href="http://www.nhc.noaa.gov/gtwo.php?basin=atlc&fdays=2" style="text-decoration:none" >(Satellite Imagery) </a> </h2>
-        <div>
-      </div>
-        <p> <br>
-          
-        </p>
-<img src="http://www.nhc.noaa.gov/xgtwo/two_atl_2d0.png" style="top: 0px; left: 5px; width:680px; height:600px; float: left" >
-        <p> <br> 
-
-</div>     
-	  
-      <div class="footer">
-	  <div>
-				
+    
+    
+  <div class="footer">
+    <div>
+        
 <div >
-			<p ><b style='color:red'>Disclaimer: </b><br/>
-			The products provided here are for educational and scientific research only and should not be used for decision making in its present form. The models, methods and results published here are under constant testing, development and subject to educational and training exercises on real time.
-			</p>
-			</div>
-		</div>
-		<p>
-					<b><br />Social Connect!</b>
-				</p>
-			
-			 
-			<p > 
-			<a href="http://www.facebook.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on facebook"><img alt="follow me on facebook" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" /></a>
-			<span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
-			<a href="https://www.youtube.com/channel/UCXExJRbcZMkS6J1L3rWv7Dw" style="line-height: 1.4;" target="_blank" title="follow me on youtube"><img alt="follow me on youtube" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" /></a><span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp;&nbsp;</span>
-			<span style="line-height: 1.4;">&nbsp;&nbsp;</span>
-			<a href="http://www.instagram.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on instagram"><img alt="follow me on instagram" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" /></a>
-			<span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
-			<a href="https://twitter.com/FerreiraGMU" style="line-height: 1.4;" target="_blank" title="follow me on Twitter"><img alt="follow me on twitter" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/twiiter30x30.png" /></a>&nbsp; &nbsp;
-			<a href="https://github.com/GMU-FerreiraResearchGroup" target="_blank"><img alt="" src="http://frg.vse.gmu.edu/documents/882235/962585/GitHub_Logo.png/21697fa0-6f7e-4760-b52f-267cdf3ed7c9?t=1434735565858" style="width: 80px; height: 33px;" /></a>
-			</p> 
+      <p ><b style='color:red'>Disclaimer: </b><br/>
+      The products provided here are for educational and scientific research only and should not be used for decision making in its present form. The models, methods and results published here are under constant testing, development and subject to educational and training exercises on real time.
+      </p>
+      </div>
+    </div>
+    <p>
+          <b><br />Social Connect!</b>
+        </p>
+      
+       
+      <p > 
+      <a href="http://www.facebook.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on facebook"><img alt="follow me on facebook" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" /></a>
+      <span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+      <a href="https://www.youtube.com/channel/UCXExJRbcZMkS6J1L3rWv7Dw" style="line-height: 1.4;" target="_blank" title="follow me on youtube"><img alt="follow me on youtube" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" /></a><span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp;&nbsp;</span>
+      <span style="line-height: 1.4;">&nbsp;&nbsp;</span>
+      <a href="http://www.instagram.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on instagram"><img alt="follow me on instagram" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" /></a>
+      <span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+      <a href="https://twitter.com/FerreiraGMU" style="line-height: 1.4;" target="_blank" title="follow me on Twitter"><img alt="follow me on twitter" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/twiiter30x30.png" /></a>&nbsp; &nbsp;
+      <a href="https://github.com/GMU-FerreiraResearchGroup" target="_blank"><img alt="" src="http://frg.vse.gmu.edu/documents/882235/962585/GitHub_Logo.png/21697fa0-6f7e-4760-b52f-267cdf3ed7c9?t=1434735565858" style="width: 80px; height: 33px;" /></a>
+      </p> 
         
         <p>Copyright Â© 2017 George Mason University</p>
       </div>
@@ -205,8 +203,67 @@ iFLOOD: Potomac River Flood Forecast System powered by ADCIRC + NAM </b>
 function confirm_alert(node) {
     return confirm("Information: The data is a prediction on educational studies of past and present condition. Cannot be treated as real");
 }
+
+//code to update date and time
+
+//for date
+var date = new Date();
+var month = date.getMonth() + 1;
+var day = date.getDate();
+var year = date.getFullYear();
+
+if(month<10){
+  month = "0"+month;
+}
+
+if(day<10){
+  day = "0"+day;
+}
+
+//for time
+var time = new Date();
+
+//update date and time in html
+var setTime1 = "08";
+var setTime2 = "14";
+var setTime3 = "20";
+var setTime4 = "02";
+
+//Function to set date and time
+var setDateAndTime = function(){
+  var currentHour = new Date().getHours();
+
+    if(currentHour >= setTime1 && currentHour < setTime2){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime1 + ":00" + " (LST)");
+    }else if(currentHour >= setTime2 && currentHour < setTime3){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime2 + ":00" + " (LST)");
+    }else if(currentHour >= setTime3 && currentHour < setTime4 + 24){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime3 + ":00" + " (LST)");
+    }else if(currentHour>=setTime4){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime4 + ":00" + " (LST)");
+    }else{
+      $('#myDate').html(" " + month + '/' + (day-1) + '/' +  year);
+      $('#myTime').html(" " + setTime3 + ":00" + " (LST)");
+    }
+}
+
+$(document).ready(function(){   
+   setDateAndTime();
+}); 
+
+//calling function after every minute
+var setFunction = setInterval(setDateAndTime ,60000);
+
+
+
+
 </script>
-<!--Script for map-->
+
+
 
   </head>
   <body>
@@ -232,11 +289,12 @@ function confirm_alert(node) {
 
 
    <script>
-  function initMap() {
-     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 9,
-      center: {lat: 38.4, lng: -76.725}
-    });
+	function initMap() {
+	   var map = new google.maps.Map(document.getElementById('map'), {
+	    zoom: 9,
+	    gestureHandling: 'greedy',
+	    center: {lat: 38.4, lng: -76.725}
+	  });
  //Adding markers of the NOAA locations in the Potomac River
    //Station DC 
    var DC = {lat: 38.8545966284, lng: -77.0245558832};
@@ -314,7 +372,7 @@ function confirm_alert(node) {
            var markerFH = new google.maps.Marker({
     map: map,
     draggable: false,
-    title:'Fort hunt',
+    title:'Fort Hunt',
     position: FH
   })  
     markerFH.addListener('click', function() {
@@ -465,60 +523,102 @@ function confirm_alert(node) {
    // scaleControl: false,
    // draggable: false,
 // map pointers
-  // Set the global styles.
+	// Set the global styles.
 map.data.setStyle(function(feature){
-  var Name = feature.getProperty('dmax');
+  var Name = feature.getProperty('elemax');
   
-  var color = "black"
-  if (Name == -10.000000) {
-    color = "#ff9900";
-   }
-   if (Name == -1 ) {
-    color = "#009900";
-   } 
+  var color = "white"
+      
       if (Name == 0) {
-    color = "#1aa3ff";
+    color = "#005ce6";
    } 
-      if (Name == 0.1) {
-    color = "#0099ff";
+      if (Name == 0.025) {
+    color = "white";
    } 
-      if (Name == 1) {
+      if (Name == 0.05) {
+    color = "#1a75ff";
+   } 
+        if (Name == 0.075) {
     color = "#008ae6";
-   } 
-      if (Name == 5) {
-    color = "#007acc";
-   } 
-        if (Name == 10) {
-  color = "#4747d1";
    }
-           if (Name == 20) {
-  color = "#3333cc";
+           if (Name == 0.1) {
+    color = "#33adff";
    } 
-           if (Name == 50) {
-    color = "#002699";
+           if (Name == 0.125) {
+    color = "#33d6ff";
    } 
-
-              if (Name == 100) {
-    color = "black";
+          if (Name == 0.15) {
+    color = "#00ffff";
    } 
+             if (Name == 0.175) {
+    color = "#00ffff";
+   } 
+             if (Name == 0.2) {
+    color = "#00ffff";
+   } 
+                if (Name == 0.225) {
+    color = "#ccff99";
+   } 
+             if (Name == 0.25) {
+    color = "#ccff99";
+   }
+                if (Name == 0.275) {
+    color = "#99ff66";
+   }
+             if (Name == 0.3) {
+    color = "#99ff66";
+   }
+                if (Name == 0.325) {
+    color = "#ffff66";
+   }  
+             if (Name == 0.35) {
+    color = "#ffff66";
+   }
+                if (Name == 0.375) {
+    color = "#ffff66";
+   } 
+                   if (Name == 0.4) {
+    color = "#ffcc00";
+   }
+                      if (Name == 0.425) {
+    color = "#ffcc00";
+   }
+                      if (Name == 0.45) {
+    color = "#ffcc00";
+   }
+                   if (Name == 0.5) {
+    color = "#ffcc00";
+   }
+                   if (Name == 0.75) {
+    color = "#ffa31a";
+   }
+                if (Name == 1) {
+    color = "#ffa31a";
+   }  
+             if (Name == 1.5) {
+    color = "#ff6600";
+   } 
+                if (Name == 2) {
+    color = "#ff6600";
+   }
+                   if (Name == 5) {
+    color = "#ff6600";
+   }  
   return {
-    
+    //var color = Name == 'Level1' ? 'blue':'blue';
   fillColor:color,
   fillOpacity: 0.75,
   strokeWeight: 0.05
   };
 });
-    // NOTE: This uses cross-domain XHR, and may not work on older browsers.
-    map.data.loadGeoJson(
-        'https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/bathyPR.json');
-  }
+	  // NOTE: This uses cross-domain XHR, and may not work on older browsers.
+	  map.data.loadGeoJson(
+	      'https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/PRmaxele.json');
+	}
    </script>
 
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiVbvW_iR0XpeBe-ojS7NjxMEDkpf0BOA&callback=initMap">
-    </script>
-
-
-
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiVbvW_iR0XpeBe-ojS7NjxMEDkpf0BOA&callback=initMap">
+		</script>
   </body>
 </html>
