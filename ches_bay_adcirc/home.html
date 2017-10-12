@@ -576,16 +576,15 @@ map.data.addListener('mouseover', function(event) {
 
 map.data.setStyle(function(feature){
   var Name = feature.getProperty('elemax');
-  var color = "white"
 
-      if (Name == -0.1) {
-    color = "#0052cc";
-   }       if (Name == 0.0) {
-    color = "#0052cc";
+  var color = "white";
+ 
+    if (Name == 0.0) {
+    color = "white";
    } 
-      if (Name == 0.125) {
-    color = "#005ce6";
-   } 
+       if (Name == 0.1) {
+    color = "white";
+   }   
       if (Name == 0.25) {
     color = "#0066ff";
    } 
@@ -602,56 +601,57 @@ map.data.setStyle(function(feature){
     color = "#00ccff";
    } 
           if (Name == 0.875) {
-    color = "#33d6ff";
+    color = "#00ccff";
    } 
              if (Name == 1.0) {
-    color = "#00ffff";
+    color = "#33d6ff";
    } 
              if (Name == 1.125) {
-    color = "#00ffff";
+    color = "#33d6ff";
    } 
                 if (Name == 1.25) {
-    color = "#ccff99";
+    color = "#00ffff";
    } 
              if (Name == 1.375) {
-    color = "#99ff66";
+    color = "#00ffff";
    }
                 if (Name == 1.5) {
-    color = "#99ff66";
+    color = "#ccff99";
    }
              if (Name == 1.625) {
-    color = "#99ff66";
+    color = "#ccff99";
    }
                 if (Name == 1.75) {
-    color = "#ffff66";
+    color = "#99ff66";
    }  
              if (Name == 1.875) {
-    color = "#ffff66";
+    color = "#99ff66";
    }
                 if (Name == 2.0) {
     color = "#ffff66";
    } 
                    if (Name == 2.25) {
-    color = "#ffcc00";
+    color = "#ffff66";
    }
                    if (Name == 2.5) {
-    color = "#ffcc00";
+    color = "#ffa31a";
    }
                    if (Name == 2.75) {
     color = "#ffa31a";
    }
                 if (Name == 3.0) {
-    color = "#ffa31a";
+    color = "#ff6600";
    }  
              if (Name == 3.25) {
-    color = "#ff6600";
+    color = "#e60000";
    } 
                 if (Name == 3.5) {
-    color = "#ff6600";
+    color = "#e60000";
    }
                    if (Name == 5) {
-    color = "#ff6600";
+    color = "#e60000";
    }  
+
   return {
     
   fillColor:color,
