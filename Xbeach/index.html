@@ -138,7 +138,16 @@ Coastal Erosion Forecast System powered by XBEACH</b>
   <source src="https://masonfloodhazardsresearchlab.github.io/Xbeach/xbeach_mgb_movietest3.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-
+  
+<div id="map" style="width:400px;height:400px">  
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(36.984, -75.881),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
           
 <p>    </p>
         </div>
