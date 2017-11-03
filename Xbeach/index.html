@@ -133,19 +133,26 @@ Coastal Erosion Forecast System powered by XBEACH</b>
 
 <div>
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d360643.5648463437!2d-75.91777666343262!3d37.02484547199094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1509751436966" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    function initMap() {
-        var myLatLng = {lat: 37.155, lng: -75.939};
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: myLatLng
-  });
-  }
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
+  <script type="text/javascript">
+      var map;
+      $(document).ready(function(){
+        map = new GMaps({
+          el: '#map',
+          lat: 36.98
+          lng: -75.881,
+          zoomControl : true,
+          zoomControlOpt: {
+            style : 'SMALL',
+            position: 'TOP_LEFT'
+        },
+        panControl : false,
+        streetViewControl : false,
+        mapTypeControl: false,
+        overviewMapControl: false
+      });
+    });
+  </script>
 <p>    </p>
   
   
