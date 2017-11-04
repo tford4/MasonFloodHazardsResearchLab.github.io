@@ -138,37 +138,7 @@ Coastal Erosion Forecast System powered by XBEACH</b>
 
 <p>    </p>
   
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-		<script type="text/javascript">
-		  function initialize() 
-		  {
-			var myOptions = {
-			  zoom: 4,
-			  center: new google.maps.LatLng(-33, 151),
-			  mapTypeId: google.maps.MapTypeId.ROADMAP
-			}
-			var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-			var inputs = document.getElementsByTagName("input");
-			
-			for(var i = 0; i < inputs.length; i++)
-			{
-				var latitudeAndLongitude = inputs[i].value.split(",");
-				var latitude = latitudeAndLongitude[0];
-				var longtitude = latitudeAndLongitude[1];
-				
-				var myLatLng = new google.maps.LatLng(latitude, longtitude);
-				
-				var image = "http://code.google.com/intl/sv-SE/apis/maps/documentation/javascript/examples/images/beachflag.png";
-				
-				var beachMarker = new google.maps.Marker({
-					position: myLatLng,
-					map: map,
-					icon: image
-				});
-			}
-		  }
-		</script>
-  
+   
   <video width="700" height="500" controls>
   <source src="https://masonfloodhazardsresearchlab.github.io/Xbeach/xbeach_mgb_movietest3.mp4" type="video/mp4">
 Your browser does not support the video tag.
@@ -180,11 +150,7 @@ Your browser does not support the video tag.
 <p>    </p>
 </p>
 </p> 
-<p><b style="color: black;font-size: 10px"> Aerial photo of the study area Magothy Bay Natural Area Preserve</b></br>
-<img src="https://masonfloodhazardsresearchlab.github.io/Xbeach/drone_pic.png" alt="Magothy Bay Natural Area Preserve" width="800" height="600" /></a>
-  
-
-
+ 
 
 <!--End of main body content-->
 <br/><br/>
