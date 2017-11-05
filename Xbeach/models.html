@@ -148,6 +148,12 @@ Magothy Bay Coastal Erosion Forecast System powered by XBEACH</b>
         var markermgb = new google.maps.Marker({
           position:mgb,
           map: map
+	var infomgb - new google.maps.InfoWindow({
+		content:"hello"
+		});
+	       	var markermgb.addListener('click', function() {
+    infomgb.open(map, markermgb);
+  }); 
         });
       }
 	  </script>
@@ -155,12 +161,8 @@ Magothy Bay Coastal Erosion Forecast System powered by XBEACH</b>
 	     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxxNFfBGLejQpYRB0uUgsQBKh26DNM-Zc&callback=initMap">
       </script>
     </body>
-		var infomgb - new google.maps.InfoWindow({
-		content:"hello"
-		});
-  	var markermgb.addListener('click', function() {
-    infomgb.open(map, markermgb);
-  });
+		
+
 		
 		
 	<div></div>
