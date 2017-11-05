@@ -150,16 +150,10 @@ Magothy Bay Coastal Erosion Forecast System powered by XBEACH</b>
           center: coast,
 	  mapTypeId: 'satellite'
         });
-	function displayMarkers(){
-		var bounds = new google.maps.LatLngBounds();
-		for (var i = 0; i < sites.length; i++){
-			var latlng = new google.maps.LatLng(sites[i].lat, sites[i].lng);
-			createMarker(latlng);
-		}
-    //    var marker =  new google.maps.Marker({			    
-    //      position: coast,
-	//	map:map
-	//});
+  	var marker =  new google.maps.Marker({			    
+   		position: coast,
+		map:map
+	});
       }
     </script>
     <script async defer
