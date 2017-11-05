@@ -153,13 +153,14 @@ Magothy Bay Coastal Erosion Forecast System powered by XBEACH</b>
   	var marker1 =  new google.maps.Marker({			    
    		position: sites[0],
 		map:map
-
 	});
 	 var marker2 =  new google.maps.Marker({			    
    		position: sites[1],
 		map:map
 	});
-     
+     	var link1 = new google.maps.event.addlistener(marker1, 'click', function(){
+		window.location.href = this.'https://masonfloodhazardsresearchlab.github.io/Xbeach/movie.html';
+	});
       }
     </script>
     <script async defer
