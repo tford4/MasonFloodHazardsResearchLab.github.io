@@ -150,7 +150,12 @@ Magothy Bay Coastal Erosion Forecast System powered by XBEACH</b>
           position:mgb,
 	  url: 'https://masonfloodhazardsresearchlab.github.io/Xbeach/movie.html',
           map: map
-	});      
+	});
+	var markercroatan = new google.maps.Marker({
+		position:croatan,
+		url: 'https://masonfloodhazardsresearchlab.github.io/Xbeach/plot.html',
+		map:map
+	});
  google.maps.event.addListener(markermgb, 'click', function() {
         window.location.href = markermgb.url;
   });      
