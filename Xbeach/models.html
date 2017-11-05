@@ -130,7 +130,7 @@ Magothy Bay Coastal Erosion Forecast System powered by XBEACH</b>
   <head>
     <style>
        #map {
-        height: 400px;
+        height: 600px;
         width: 100%;
        }
     </style>
@@ -140,13 +140,18 @@ Magothy Bay Coastal Erosion Forecast System powered by XBEACH</b>
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 36.984208, lng: -75.881767};
+        var coast = {lat: 36.984208, lng: -75.881767};
+	var sites = [
+		[37.151106, -75.942514],
+		[36.81826, -75.966854]
+	];
+	      
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          center: uluru
+          center: coast
         });
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: new google.maps.Latlng(sites[1][1], sites[1][2])
           map: map
         });
       }
