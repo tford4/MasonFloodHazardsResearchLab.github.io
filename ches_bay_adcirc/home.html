@@ -577,13 +577,10 @@ map.data.addListener('mouseover', function(event) {
 map.data.setStyle(function(feature){
   var Name = feature.getProperty('elemax');
 
-  var color = "white";
+  var color = "blue";
  
-    if (Name == 0.0) {
-    color = "blue";
-   } 
        if (Name == 0.1) {
-    color = "white";
+    color = "blue";
    }   
       if (Name == 0.25) {
     color = "#0066ff";
