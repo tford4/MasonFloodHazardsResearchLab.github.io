@@ -158,7 +158,11 @@ function makePlotly( x, y){
 var layout = {
   title: 'Tides',
 	xaxis: {
-
+		autotick: false,
+    		ticks: 'outside',
+    		tickcolor: 'rgb(204,204,204)',
+    		tickwidth: 2,
+    		ticklen: 5
 	},
 	yaxis: {
 		title: 'MSL (m)',
