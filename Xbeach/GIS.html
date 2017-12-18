@@ -155,10 +155,14 @@ function makePlotly( x, y){
     x: x,
     y: y
   }];
-
-  Plotly.newPlot('myDiv', traces,
-    {title: 'Tides'});
+var layout = {
+  title: 'Tides',
+  yaxis: {
+    title: 'MSL (m)'
+  }
 };
+  Plotly.newPlot('myDiv', traces,layout);
+
   makeplot();
 	
 </script>	
