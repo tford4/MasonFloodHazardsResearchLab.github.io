@@ -130,12 +130,20 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 }																		
 </style>
 
-<!-- Resources -->
-<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+import plotly.plotly as py
+from plotly.graph_objs import *
+
+trace0 = Scatter(
+    x=[1, 2, 3, 4],
+    y=[10, 15, 13, 17]
+)
+trace1 = Scatter(
+    x=[1, 2, 3, 4],
+    y=[16, 5, 11, 9]
+)
+data = Data([trace0, trace1])
+
+py.plot(data, filename = 'basic-line')	
 
 <div>
 <p></p>
@@ -148,69 +156,6 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 </div>
 	 
 <body>
-import java.io.*;
-import java.util.*;
-import org.jfree.data.*;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartUtilities;
-import org.jfree.chart.plot.PlotOrientation;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.jfree.data.category.DefaultCategoryDataset;
-
-    public class ReadExcel{
-        public static void main(String[]args){
-    short a=0;  
-    short b=1;  
-     int i=0;   
-    ArrayList<Integer> list1=new ArrayList<Integer>();
-    ArrayList<Integer> list2=new ArrayList<Integer>();
-        int   x=0, y=0;  
-       String filename ="https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv";     
-        if(filename != null && !filename.equals("")){
-        try{    
-        FileInputStream fs =new FileInputStream(filename);    
-        HSSFWorkbook wb = new HSSFWorkbook(fs);   
-        for(int k = 0; k < wb.getNumberOfSheets(); k++){    
-         int j=i+1;    
-         HSSFSheet sheet = wb.getSheetAt(k);    
-         int rows  = sheet.getPhysicalNumberOfRows();    
-         for(int r =     1; r < rows; r++){    
-         HSSFRow row   = sheet.getRow(r);    
-         int cells = row.getPhysicalNumberOfCells();    
-            HSSFCell cell1  = row.getCell(a);      
-            x =(int) cell1.getNumericCellValue();    
-            HSSFCell cell2  = row.getCell(b);     
-            y =(int) cell2.getNumericCellValue();     
-
-            list1.add(new Integer(x));
-            list2.add(new Integer(y));   
-          }       
-          i++;   
-        }    
-}catch(Exception e){ 
-    System.out.println(e);
-
- }
-
- }
- DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-  for(int j=0;j<list1.size();j++){
-        dataset.setValue((double)list2.get(j), "Marks", list1.get(j).toString());
-  }
-        JFreeChart chart = ChartFactory.createBarChart("BarChart using JFreeChart","ID", "Marks", dataset, 
-        PlotOrientation.VERTICAL, false,true, false);
-               try {
-               ChartUtilities.saveChartAsJPEG(new File("C:/chart.jpg"), chart,400, 300);
-               } catch (IOException e) {
-               System.out.println("Problem in creating chart.");
-  }
- }
-}
-
 
 
 <div></div>
