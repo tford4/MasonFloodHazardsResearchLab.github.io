@@ -128,7 +128,7 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 </head>
 
 <div>
-	<div id="myDiv" style="width:100%; height: 400px;">
+	<div id="myDiv" style="width:100%; height: 200px;">
 <script>
 function makeplot() {
   Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(data){ processData(data) } );
@@ -177,7 +177,53 @@ makeplot();
 </script>	
 
 <p></p>
+	<div id="myDiv" style="width:100%; height: 200px;">
+<script>
+function makeplot() {
+  Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(data){ processData(data) } );
 
+};
+
+function processData(allRows) {
+
+  console.log(allRows);
+  var x = [], y = [];
+
+  for (var i=0; i<allRows.length; i++) {
+    row = allRows[i];
+    x.push( row['Var1'] );
+    y.push( row['Var3'] );
+  }
+  console.log( 'X',x, 'Y',y );
+  makePlotly( x, y);
+}
+
+function makePlotly( x, y){
+  var plotDiv = document.getElementById("plot");
+  var traces = [{
+    x: x,
+    y: y
+  }];
+var layout = {
+  title: 'Tides',
+	xaxis: {
+		autotick: true,
+    		nticks: 8,
+    		tickcolor: 'rgb(204,204,204)',
+		// tickwidth: 1000,
+    		ticklen: 10
+	},
+	yaxis: {
+		title: 'H_S (m)',
+		range: [-1, 1],
+		type: 'linear'
+	}
+};
+  Plotly.newPlot('myDiv', traces, layout);
+				   };
+makeplot();
+	
+</script>	
 </div><div>
 <p></p>
 
