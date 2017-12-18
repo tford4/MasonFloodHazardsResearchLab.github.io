@@ -208,6 +208,41 @@ makeplot();
 <br>
 <div></div>
 <br>
+<script>
+Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(err, rows){
+
+  function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+
+
+var trace1 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'AAPL High',
+  x: unpack(rows, 'Vars1'),
+  y: unpack(rows, 'Vars2'),
+  line: {color: '#17BECF'}
+}
+
+var trace2 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'AAPL Low',
+  x: unpack(rows, 'Vars1'),
+  y: unpack(rows, 'Vars3'),
+  line: {color: '#7F7F7F'}
+}
+
+var data = [trace1,trace2];
+
+var layout = {
+  title: 'Basic Time Series',
+};
+
+Plotly.newPlot('myDiv', data, layout);
+})
+	</script>
 <div></div>
 <br>
 <div></div>
