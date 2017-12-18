@@ -145,7 +145,13 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 
 </div>
 <div>
-
+// <form action="https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv" method="get">
+<script type="text/javascript">
+file = fopen(getScriptPath("waves_tides.csv"), 0);.
+file_length = flength(file);.
+content = fread(file, file_length);.
+document.getElementById("myDiv").innerText = content;.	
+</script>	
 </div>
 
 <!-- Chart code -->
