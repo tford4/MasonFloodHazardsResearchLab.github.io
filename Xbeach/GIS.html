@@ -138,16 +138,17 @@ function makeplot() {
 function processData(allRows) {
 
   console.log(allRows);
-  var x = [], y = [], y2 = [];
+  var x = [], y = [],x2 =[], y2 = [];
 
   for (var i=0; i<allRows.length; i++) {
     row = allRows[i];
     x.push( row['Var1'] );
     y.push( row['Var2'] );
+    x2.push( row['Var1']);  
     y2.push( row['Var3'] );	  
   }
   console.log( 'X',x, 'Y',y );
-  makePlotly( x, y);
+ figure = makePlotly( x, y);
 }
 function makePlotly( x, y){
   var plotDiv = document.getElementById("plot");
@@ -155,11 +156,7 @@ function makePlotly( x, y){
     x: x,
     y: y
   }];
-  var traces2 = [{
-    x: x,
-    y: y2
-  }];
-	var data = [traces1, traces2];
+	var data = [traces1];
 var layout = {
   title: 'Tides',
 	xaxis: {
@@ -179,7 +176,7 @@ var layout = {
 				   };
 makeplot();	
 </script>	
-
+figure.show()
 	
 </div><div>
 <p></p>
