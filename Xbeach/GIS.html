@@ -156,19 +156,11 @@ function makePlotly( x, y){
     y: y
   }];
 var layout = {
-  title: 'Custom Range',
-  xaxis: {
-    type: 'date'
-  },
-  yaxis: {
-    autorange: true,
-    range: [86.8700008333, 138.870004167],
-    type: 'linear'
-  }
+  title: 'Tides',
 };
   Plotly.newPlot('myDiv', traces, layout);
-				   })
-
+				   };
+makeplot();
 	
 </script>	
 
