@@ -161,7 +161,11 @@ var layout = {
     title: 'MSL (m)'
   }
 };
-  Plotly.newPlot('myDiv', traces,layout);
+  Plotly.newPlot('myDiv', traces,  {title: 'Tides',
+				   yaxis:{title: 'MSL (m)'
+					 }
+					 });
+				   };
 
   makeplot();
 	
