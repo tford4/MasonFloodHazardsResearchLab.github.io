@@ -157,6 +157,14 @@ function makePlotly( x, y){
   }];
 var layout = {
   title: 'Tides',
+	xaxis: {
+		type: 'date'
+	},
+	yaxis: {
+		title: 'MSL (m)',
+		range: [-1, 1],
+		type: 'linear'
+	}
 };
   Plotly.newPlot('myDiv', traces, layout);
 				   };
