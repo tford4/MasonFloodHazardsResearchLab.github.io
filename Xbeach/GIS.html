@@ -155,7 +155,7 @@ function makePlotly( x, y){
     x: x,
     y: y
   }];
-	var data = [traces1];
+
 var layout = {
   title: 'Tides',
 	xaxis: {
@@ -171,7 +171,7 @@ var layout = {
 		type: 'linear'
 	}
 };
-  Plotly.newPlot('myDiv', data, layout);
+  Plotly.newPlot('myDiv', traces1, layout);
 				   };
 makeplot();	
 </script>
