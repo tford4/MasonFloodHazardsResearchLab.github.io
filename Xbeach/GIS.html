@@ -156,16 +156,19 @@ function makePlotly( x, y){
     y: y
   }];
 var layout = {
-  title: 'Tides',
+  title: 'Custom Range',
+  xaxis: {
+    range: ['2016-07-01', '2016-12-31'],
+    type: 'date'
+  },
   yaxis: {
-    title: 'MSL (m)'
+    autorange: true,
+    range: [86.8700008333, 138.870004167],
+    type: 'linear'
   }
 };
-  Plotly.newPlot('myDiv', traces,  {title: 'Tides',
-				   yaxis:{title: 'MSL (m)'
-					 }
-					 });
-				   };
+  Plotly.newPlot('myDiv', traces, layout);
+				   })
 
   makeplot();
 	
