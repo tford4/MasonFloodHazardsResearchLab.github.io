@@ -123,23 +123,18 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 <div></div>
 <br>
 <p>This system is currently under development and testing. This page is de-activated until further model testing and development.
-
-import plotly.plotly as py
-from plotly.graph_objs import *
-
-trace0 = Scatter(
-    x=[1, 2, 3, 4],
-    y=[10, 15, 13, 17]
-)
-trace1 = Scatter(
-    x=[1, 2, 3, 4],
-    y=[16, 5, 11, 9]
-)
-data = Data([trace0, trace1])
-
-py.plot(data, filename = 'basic-line')	
-
+<head>
+	<script src="plotly-latest.min.js"></script>
+</head>
+<div id="tester" style="width:600px;height:250px;"></div>
 <div>
+	<script>
+	TESTER = document.getElementById('tester');
+	Plotly.plot( TESTER, [{
+	x: [1, 2, 3, 4, 5],
+	y: [1, 2, 4, 8, 16] }], {
+	margin: { t: 0 } } );
+</script>
 <p></p>
 
 </div><div>
