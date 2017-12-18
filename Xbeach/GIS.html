@@ -128,7 +128,7 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 </head>
 
 <div>
-	<div id="myDiv" style="width:100%; height: 250px;">
+	<div id="myDiv" style="width:100%; height: 400px;">
 <script>
 function makeplot() {
   Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(data){ processData(data) } );
@@ -138,22 +138,28 @@ function makeplot() {
 function processData(allRows) {
 
   console.log(allRows);
-  var x = [], y = [];
+  var x = [], y = [], y2 = [];
 
   for (var i=0; i<allRows.length; i++) {
     row = allRows[i];
     x.push( row['Var1'] );
     y.push( row['Var2'] );
+    y2.push( row['Var3'] );	  
   }
   console.log( 'X',x, 'Y',y );
   makePlotly( x, y);
 }
 function makePlotly( x, y){
   var plotDiv = document.getElementById("plot");
-  var traces = [{
+  var traces1 = [{
     x: x,
     y: y
   }];
+  var traces2 = [{
+    x: x,
+    y: y2
+  }];
+	var data = [traces1, traces2];
 var layout = {
   title: 'Tides',
 	xaxis: {
@@ -169,7 +175,7 @@ var layout = {
 		type: 'linear'
 	}
 };
-  Plotly.newPlot('myDiv', traces, layout);
+  Plotly.newPlot('myDiv', data, layout);
 				   };
 makeplot();	
 </script>	
