@@ -138,14 +138,13 @@ function makeplot() {
 function processData(allRows) {
 
   console.log(allRows);
-  var x = [], y = [],x2 =[], y2 = [];
+  var x = [], y = [];
 
   for (var i=0; i<allRows.length; i++) {
     row = allRows[i];
     x.push( row['Var1'] );
     y.push( row['Var2'] );
-    x2.push( row['Var1']);  
-    y2.push( row['Var3'] );	  
+	  
   }
   console.log( 'X',x, 'Y',y );
  figure = makePlotly( x, y);
@@ -175,9 +174,10 @@ var layout = {
   Plotly.newPlot('myDiv', data, layout);
 				   };
 makeplot();	
-</script>	
+</script>
+<script>
 figure.show()
-	
+		</script>	
 </div><div>
 <p></p>
 
