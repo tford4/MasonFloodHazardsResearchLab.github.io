@@ -137,7 +137,7 @@ Your browser does not support the video tag.
 <p style="color: black; text-align:center;font-size: 10px">Last model run updated at:<span id="myDate"></span><span id="myTime"></span></p>
 <div id="myDiv" style="width:105%; height: 550px;">
 <script>
-var d3 = Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(err, rows){
+Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(err, rows){
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
 }
@@ -202,13 +202,13 @@ var layout = {
 	},
   	shapes: [{
 		type: 'rect',
-		layer: 'above',
+		layer: 'below',
 		xref:"x",
 		yref:"y",
 		x0:0,
 		y0:0,
-		x1: d3.max(x1),
-		y1: d3.max(y1),
+		x1: trace1.max(x1),
+		y1: trace1.max(y1),
 		fillcolor: '#98fb98',
 		opacity: 0.8
 	}],
