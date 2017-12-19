@@ -167,8 +167,7 @@ var trace2 = {
 
 var data = [trace1,trace2];
 
-var layout = {
-	displayModeBar: false,
+var layout = {	
 	showlegend: false,
 	hovermode: "x",
 	images: [
@@ -203,7 +202,7 @@ var layout = {
 	},
 };
 
-Plotly.newPlot('myDiv', data, layout);
+Plotly.newPlot('myDiv', data, layout,{displayModeBar: false});
 })
 		</script>
 <div></div>
