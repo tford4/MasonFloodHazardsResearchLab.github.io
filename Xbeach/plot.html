@@ -180,13 +180,7 @@ var layout = {
 		sizex:1,
 		sizey:1,
 		opacity: 0.2,
-		layer:"below"}],
-	 bgcolor:{
-		 xref:"paper",
-		yref:"paper",
-		 color:'#c6e2ff',
-	 	},
-		
+		layer:"below"}],		
 	xaxis: {
 		anchor: 'y1',
 		autotick: true,
@@ -208,7 +202,7 @@ var layout = {
 	},
 };
 
-Plotly.newPlot('myDiv', data, layout,{displayModeBar: false});
+Plotly.newPlot('myDiv', data, layout,{displayModeBar: false},{style:'background-color:#c6e2ff'});
 })
 	</script></div>
 	      <br></br>
