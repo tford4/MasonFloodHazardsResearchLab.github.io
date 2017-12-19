@@ -222,9 +222,7 @@ var trace1 = {
   name: 'tide (m)',
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var2'),
-  line: {color: '#17BECF'},
-  xaxis: 'x1',
-  yaxis: 'y1'
+  line: {color: '#17BECF'}
 }
 
 var trace2 = {
@@ -234,6 +232,8 @@ var trace2 = {
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var3'),
   line: {color: '#7F7F7F'},
+  xaxis: 'x2',
+  yaxis: 'y2'
 }
 
 var data = [trace1,trace2];
@@ -250,7 +250,12 @@ yaxis: {
 		title: 'Elevation above NavD88',
 		range: [-1, 1],
 	},
-	xaxis2: {anchor: 'y1'}
+	xaxis2: {anchor: 'y2',
+		autotick: true,
+    		nticks: 8,
+    		tickcolor: 'rgb(204,204,204)',
+		// tickwidth: 1000,
+    		ticklen: 10}
 };
 
 Plotly.newPlot('myDiv', data, layout);
