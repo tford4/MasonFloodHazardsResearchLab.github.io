@@ -160,8 +160,6 @@ Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
 }
-
-
 var trace1 = {
   type: "scatter",
   mode: "lines",
@@ -170,7 +168,6 @@ var trace1 = {
   y: unpack(rows, 'Var2'),
   line: {color: '#17BECF'}
 }
-
 var trace2 = {
   type: "scatter",
   mode: "lines",
@@ -194,6 +191,7 @@ var layout = {
     		ticklen: 10
 	},
 	yaxis: {
+		domain:[0, 0.25],
 		title: 'Elevation above NavD88',
 		range: [-1, 1],
 	},
@@ -204,6 +202,7 @@ var layout = {
 		// tickwidth: 1000,
     		ticklen: 10},
 	yaxis2: {
+		domain:[0.5, 0.75],
 		title: 'Elevation above NavD88',
 		range: [-0.1, 2],
 	},
