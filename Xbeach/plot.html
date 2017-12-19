@@ -141,7 +141,75 @@ Your browser does not support the video tag.
 <p>    </p>
         </div>
 
+<script>
+Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(err, rows){
 
+  function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+var trace1 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'tide (m)',
+  x: unpack(rows, 'Var1'),
+  y: unpack(rows, 'Var2'),
+  line: {color: '#17BECF'},
+  linewidth: 5,	
+  xaxis: 'x1',
+  yaxis: 'y1'
+
+}
+var trace2 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'Waves H_s (m)',
+  x: unpack(rows, 'Var1'),
+  y: unpack(rows, 'Var3'),
+  line: {color: '#7F7F7F'},
+  linewidth: 5,
+  xaxis: 'x1',
+  yaxis: 'y2'
+}
+
+var data = [trace1,trace2];
+
+var layout = {
+	hovermode: "x",
+	images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x:0,
+		y:1,
+		sizex:1,
+		sizey:1,
+		opacity: 0.2,
+		layer:"below"}],
+	xaxis: {
+		anchor: 'y1',
+		autotick: true,
+    		nticks: 8,
+    		tickcolor: 'rgb(204,204,204)',
+		tickwidth: 5,
+    		//ticklen: 5
+	},
+	yaxis: {
+		domain:[0, 0.4],
+		title: 'Elevation above NavD88',
+		range: [-1, 1],
+	},
+
+	yaxis2: {
+		domain:[0.45, 0.85],
+		title: 'Elevation above NavD88',
+		range: [-0.1, 2],
+	},
+};
+
+Plotly.newPlot('myDiv', data, layout);
+})
+	</script>
 </p>
 	<p><b style="color: black;font-size: 12px">This aerial photo shows the exact location of the 1-dimensional cross-section where we produce our forecasts.  Forecasts are produced at the fenced area. </b></br>
 <img src="https://masonfloodhazardsresearchlab.github.io/Xbeach/croatan.jpg" alt="Croatan Beach" width="100%" height="600" /><p><b style="color: black;font-size: 8px"> Picture by Scott Hansen</b></br></a>
