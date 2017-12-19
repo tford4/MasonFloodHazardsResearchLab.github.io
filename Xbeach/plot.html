@@ -134,8 +134,8 @@ Croatan Beach Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 <source src="https://masonfloodhazardsresearchlab.github.io/Xbeach/xbeach_croatan_movie.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-<p style="color: black; text-align:center;font-size: 10px">Last model run updated at:<span id="myDate"></span><span id="myTime"></span></p>
-<p id="myDiv" style="width:110%; height: 550px;">
+//<p style="color: black; text-align:center;font-size: 10px">Last model run updated at:<span id="myDate"></span><span id="myTime"></span></p>
+<div id="myDiv" style="width:110%; height: 550px;">
 <script>
 Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides.csv", function(err, rows){
   function unpack(rows, key) {
@@ -231,7 +231,7 @@ var layout = {
 
 Plotly.newPlot('myDiv', data, layout,{displayModeBar: false});
 })
-	</script></p>
+	</script></div>
 	      <br></br>
 <div></div>
 <br>
