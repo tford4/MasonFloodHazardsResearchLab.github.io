@@ -148,7 +148,7 @@ var trace1 = {
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var2'),
   line: {color: '#00e5ee',
-	width: 3
+	width: 5
 	},	
   xaxis: 'x1',
   yaxis: 'y1'
@@ -161,7 +161,7 @@ var trace2 = {
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var3'),
   line: {color: '#7F7F7F',
-	width: 3
+	width: 5
 	},
   xaxis: 'x1',
   yaxis: 'y2'
@@ -181,7 +181,7 @@ var layout = {
 		y:1,
 		sizex:1,
 		sizey:1,
-		opacity: 0.2,
+		opacity: 0.25,
 		layer:"below"}],
 //	shapes: [{
 //		type: 'rect',
@@ -201,7 +201,7 @@ var layout = {
 	xaxis: {
 		showgrid: true,
 		gridcolor: '#008b45',
-		gridwidth: .1,
+		gridwidth: .05,
 		anchor: 'y1',
 		autotick: true,
     		nticks: 8,
@@ -212,7 +212,7 @@ var layout = {
 	yaxis: {
 		showgrid: true,
 		gridcolor: '#008b45',
-		gridwidth: .1,
+		gridwidth: .05,
 		domain:[0, 0.45],
 		title: 'Elevation above NavD88(m)',
 		range: [-1, 1],
@@ -221,7 +221,7 @@ var layout = {
 	yaxis2: {
 		showgrid: true,
 		gridcolor: '#008b45',
-		gridwidth: .1,
+		gridwidth: .05,
 		domain:[0.55, 1],
 		title: 'Hs(m)',
 		range: [-0.1, 2],
