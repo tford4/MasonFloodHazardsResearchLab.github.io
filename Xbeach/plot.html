@@ -181,22 +181,25 @@ var layout = {
 		sizey:1,
 		opacity: 0.2,
 		layer:"below"}],
-	shapes: [{
-		type: 'rect',
-		layer: 'below',
-		xref:"paper",
-		yref:"paper",
-		x0:0,
-		y0:0,
-		x1: 1,
-		y1: 1,
-		fillcolor: '#548b54',
-		opacity: 0.1,
-		line: {
-			width:0
-		}
-	}],
+//	shapes: [{
+//		type: 'rect',
+//		layer: 'below',
+//		xref:"paper",
+//		yref:"paper",
+//		x0:0,
+//		y0:0,
+//		x1: 1,
+//		y1: 1,
+//		fillcolor: '#548b54',
+//		opacity: 0.1,
+//		line: {
+//			width:0
+//		}
+//	}],
 	xaxis: {
+		showgrid: true,
+		gridcolor: '#008b45',
+		gridwidth: 2,
 		anchor: 'y1',
 		autotick: true,
     		nticks: 8,
@@ -205,12 +208,18 @@ var layout = {
     		//ticklen: 5
 	},
 	yaxis: {
+		showgrid: true,
+		gridcolor: '#008b45',
+		gridwidth: 2,
 		domain:[0, 0.45],
 		title: 'Elevation above NavD88(m)',
 		range: [-1, 1],
 	},
 
 	yaxis2: {
+		showgrid: true,
+		gridcolor: '#008b45',
+		gridwidth: 2,
 		domain:[0.55, 1],
 		title: 'Hs(m)',
 		range: [-0.1, 2],
