@@ -127,7 +127,7 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 
 <!--Main elements of page.. main body comes below-->
 
-<div>
+		<div></div>
 <br>
 <p>The Mason Flood Hazards Research Lab has been studying storm surge and waves attenuation in the marshes of Magothy Bay Natural Area Preserve for the last 3 years. Our group has extensively monitored the hydrodynamic regime in the marshes and documented several hurricanes and storms.</p>
 <p>This model produces coastal flooding and marsh erosion for current conditions and up to 84 hours into the future.</p>
@@ -137,11 +137,12 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 	
 	<video width="100%" height="500" controls>
   <source src="https://masonfloodhazardsresearchlab.github.io/Xbeach/xbeach_mgb_movietest3.mp4" type="video/mp4">	
-</br>
-	
 </video>
+		</br>
+	
+
 <p style="color: black; text-align:center;font-size: 10px">Last model run updated at:<span id="myDate"></span><span id="myTime"></span></p>
-</div> 	
+<div></div> 	
 			
 <p>    </p>
         </div>
@@ -152,7 +153,9 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
   <source src="https://masonfloodhazardsresearchlab.github.io/Xbeach/TimeLapse_MGB_Culvert_20170828_20170830.mp4.wmv.mp4">	
 <br></br>
 	    </video>
-<div id="myDiv" style="width:110%; height: 600px;">	    
+
+<div>	          </div>
+	  <div id="myDiv" style="width:110%; height: 600px;">	    
 <script>
 Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/mgb_tides.csv", function(err, rows){
   function unpack(rows, key) {
@@ -201,7 +204,7 @@ var layout = {
 };
 Plotly.newPlot('myDiv', data, layout,{displayModeBar: false});
 })	  
-<div>	          </div>
+		  </script>
 </p>	
 <p><b style="color: black;font-size: 12px">This aerial photo of the preserve shows the exact location of the 1-dimensional cross-section utilized to perform the simulations. The cross-section encompasses the area from the near shore region up to the levee at the end of the marsh.</b></br>
 <img src="https://masonfloodhazardsresearchlab.github.io/Xbeach/drone_pic.png" alt="Magothy Bay Natural Area Preserve" width="100%" height="600" /></b><br></a>
