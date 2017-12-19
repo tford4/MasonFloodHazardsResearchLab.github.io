@@ -170,6 +170,21 @@ var data = [trace1,trace2];
 var layout = {	
 	showlegend: false,
 	hovermode: "x",
+	shapes: [{
+		type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"paper",
+		x0:0,
+		y0:-1,
+		x1: 215,
+		y1: 200,
+		fillcolor: '#98fb98',
+		opacity: 0.2,
+		line: {
+			width:0
+		}
+	}],
 	images: [
 		{
 		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
@@ -200,18 +215,7 @@ var layout = {
 		title: 'Hs(m)',
 		range: [-0.1, 2],
 	},
-  	shapes: [{
-		type: 'rect',
-		layer: 'below',
-		xref:"x",
-		yref:"y",
-		x0:0,
-		y0:-1,
-		x1: 215,
-		y1: 200,
-		fillcolor: '#98fb98',
-		opacity: 0.2
-	}],
+
 };
 
 Plotly.newPlot('myDiv', data, layout,{displayModeBar: false});
