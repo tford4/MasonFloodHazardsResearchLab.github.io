@@ -169,15 +169,15 @@ var trace1 = {
   line: {color: '#17BECF'},
   linewidth: 5,	
   xaxis: 'x1',
-  yaxis: 'y1'
-
+  yaxis: 'y1',
+  marker: {color:'#17BECF'}
 }
 var trace2 = {
   type: "scatter",
   mode: "lines",
   name: 'Waves H_s (m)',
   x: unpack(rows, 'Var1'),
-  y: unpack(rows, 'Var3'), marker: {color: 'fuchsia'},
+  y: unpack(rows, 'Var3'),
   line: {color: '#7F7F7F'},
   linewidth: 5,
   xaxis: 'x1',
