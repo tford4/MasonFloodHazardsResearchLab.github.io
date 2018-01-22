@@ -170,7 +170,6 @@ var trace1 = {
   linewidth: 5,	
   xaxis: 'x1',
   yaxis: 'y1',
-  y: y1, marker: {color:'#17BECF'}
 }
 var trace2 = {
   type: "scatter",
@@ -182,7 +181,6 @@ var trace2 = {
   linewidth: 5,
   xaxis: 'x1',
   yaxis: 'y2',
-  y: y2, marker: {color: '#7F7F7F'},
 }
 
 var data = [trace1,trace2];
@@ -222,18 +220,42 @@ var layout = {
 };
 
 Plotly.newPlot("myDiv", data, layout);
+})
+	</script>
+	
+<div id="myDiv" style="width:400px;height:400px;"></div>
+<div class="hideshow" id="top" style="margin-left:80px;">
+    <button style=";background:fuchsia;">Toggle Fuchsia</button>
+</div>
+<div class="hideshow" id="bottom" style="margin-left:80px;">
+    <button style="background:#FFD966;">Toggle Yellow</button
+</div>	
+var d3 = Plotly.d3,
+    y1 = d3.range(100).map(d3.random.normal(6)),
+    y2 = d3.range(100).map(d3.random.normal(9)),
+    layout = {
+        title:'Click buttons to toggle traces',
+        showlegend:false
+    },
+    data = [{
+        y:y1, marker: {color: 'fuchsia'}
+    }, {
+      y:y2, marker: {color: '#FFD966'}
+    }];
+
+Plotly.plot("myDiv", data, layout);
+
 $('.hideshow button').click(function(){
     var btn_id = this.parentNode.id,
         data_index = ( btn_id === 'top' ) ? 0 : 1,
         myDiv = document.getElementById("myDiv"),
         visible = myDiv.data[data_index].visible;
-  
+
     if( visible === undefined ) visible = true;
-  
+
     Plotly.restyle("myDiv", 'visible', !visible, data_index);
-});
-})
-	</script>
+});	
+	
 <div></div>
 <br>
 <div></div>
