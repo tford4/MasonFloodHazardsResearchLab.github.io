@@ -179,6 +179,7 @@ var trace2 = {
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var3'),
   line: {color: '#7F7F7F'},
+  marker: {color: '#7F7F7F'},
   linewidth: 5,
   xaxis: 'x1',
   yaxis: 'y2'
@@ -221,8 +222,16 @@ var layout = {
 };
 
 Plotly.newPlot("myDiv", data, layout);
-
-
+$('.hideshow button').click(function(){
+    var btn_id = this.parentNode.id,
+        data_index = ( btn_id === 'top' ) ? 0 : 1,
+        myDiv = document.getElementById("myDiv"),
+        visible = myDiv.data[data_index].visible;
+  
+    if( visible === undefined ) visible = true;
+  
+    Plotly.restyle("myDiv", 'visible', !visible, data_index);
+});
 })
 	</script>
 <div></div>
