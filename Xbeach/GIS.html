@@ -170,7 +170,7 @@ var trace1 = {
   linewidth: 5,	
   xaxis: 'x1',
   yaxis: 'y1',
-  marker: {color:'#17BECF'}
+  y: y1, marker: {color:'#17BECF'}
 }
 var trace2 = {
   type: "scatter",
@@ -179,10 +179,10 @@ var trace2 = {
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var3'),
   line: {color: '#7F7F7F'},
-  marker: {color: '#7F7F7F'},
   linewidth: 5,
   xaxis: 'x1',
-  yaxis: 'y2'
+  yaxis: 'y2',
+  y: y2, marker: {color: '#7F7F7F'},
 }
 
 var data = [trace1,trace2];
