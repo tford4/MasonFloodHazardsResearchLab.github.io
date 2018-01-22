@@ -195,6 +195,7 @@ var layout = {
 		yref:"paper",
 		x:0,
 		y:1,
+		y: marker,
 		sizex:1,
 		sizey:1,
 		opacity: 0.2,
@@ -220,7 +221,7 @@ var layout = {
 	},
 };
 
-Plotly.newPlot('myDiv', data, layout);
+Plotly.newPlot("myDiv", data, layout);
 
 	$('.hideshow button').click(function(){
     var btn_id = this.parentNode.id,
