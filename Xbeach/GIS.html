@@ -221,6 +221,7 @@ var layout = {
 };
 
 Plotly.newPlot('myDiv', data, layout);
+
 	$('.hideshow button').click(function(){
     var btn_id = this.parentNode.id,
         data_index = ( btn_id === 'top' ) ? 0 : 1,
@@ -231,7 +232,6 @@ Plotly.newPlot('myDiv', data, layout);
 
     Plotly.restyle("myDiv", 'visible', !visible, data_index);
 });
-})
 	</script>
 <div></div>
 <br>
