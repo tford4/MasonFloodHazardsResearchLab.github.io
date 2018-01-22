@@ -169,6 +169,7 @@ var trace1 = {
   linewidth: 5,	
   xaxis: 'x1',
   yaxis: 'y1',
+  marker: {color: '#17BECF'}
 }
 var trace2 = {
   type: "scatter",
@@ -220,6 +221,16 @@ var layout = {
 
 Plotly.newPlot("myDiv", data, layout);
 })
+	$('.hideshow button').click(function(){
+    var btn_id = this.parentNode.id,
+        data_index = ( btn_id === 'top' ) ? 0 : 1,
+        myDiv = document.getElementById("myDiv"),
+        visible = myDiv.data[data_index].visible;
+
+    if( visible === undefined ) visible = true;
+
+    Plotly.restyle("myDiv", 'visible', !visible, data_index);
+});
 	</script>
 
 	
