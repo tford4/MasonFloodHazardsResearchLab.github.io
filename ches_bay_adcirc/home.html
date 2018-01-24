@@ -578,10 +578,16 @@ map.data.setStyle(function(feature){
   var Name = feature.getProperty('elemax');
 
   var color = "white";
- 
-       if (Name == 0.1) {
+	
+       if (Name == 0.025) {
     color = "white";
-   }   
+   } 
+      if (Name == 0.05) {
+    color = "#0066ff";
+   }	
+      if (Name == 0.1) {
+    color = "#0066ff";
+   } 
       if (Name == 0.25) {
     color = "#0066ff";
    } 
