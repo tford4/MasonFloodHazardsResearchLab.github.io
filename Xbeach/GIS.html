@@ -192,7 +192,8 @@ var trace3 = {
   line: {color: '#17BECF'},
   linewidth: 5,
   xaxis: 'x1',
-  yaxis: 'y1'	
+  yaxis: 'y1',
+  marker 
 }
 var trace4 = {
   type: "scatter",
@@ -248,7 +249,7 @@ Plotly.newPlot("myDiv", data, layout);
     var btn_id = this.parentNode.id,
         data_index = ( btn_id === 'top' ) ? 0 : 1,
         myDiv = document.getElementById("myDiv"),
-        visible = myDiv.data2[data_index].visible;
+        visible = myDiv.data[data_index].visible;
 
     if( visible === undefined ) visible = true;
 
