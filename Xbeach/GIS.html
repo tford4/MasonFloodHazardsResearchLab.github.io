@@ -210,9 +210,6 @@ var trace4 = {
   visible: false,
 }
 var data  = [trace1,trace2,trace3,trace4];
-var data1 = [trace1,trace3];
-var data2 = [trace2,trace4];
-var data3 = [data1,data2];
 var layout = {
 	hovermode: "x",
 	images: [
@@ -251,10 +248,14 @@ Plotly.newPlot("myDiv", data, layout);
 })
 $('.hideshow button').click(function(){
         var btn_id = this.parentNode.id,
-        data_index = ( btn_id === '1' ) ? 0 : 1,
-
+        data_index = ( btn_id === '1' ) ? 0 : 2,
+	data_index2= ( btn_id === '1' ) ? 1 : 3,
         myDiv = document.getElementById("myDiv"),
-        visible = myDiv.data[data_index].visible;
+        visible =[{
+		myDiv.data[data_index].visible,
+		myDiv.data[data_index2].visible
+		 }];
+		
 
 //    if( visible === false ) visible = true;
 
