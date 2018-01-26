@@ -174,18 +174,18 @@ var trace1 = {
   yaxis: 'y1',
   visible: true,
 }
-//var trace2 = {
-//  type: "scatter",
-//  mode: 'lines',
-//  name: 'Waves H_s (m)',
-//  x: unpack(rows, 'Var1'),
-//  y: unpack(rows, 'Var3'),
-//  line: {color: '#7F7F7F'},
-//  linewidth: 5,
-//  xaxis: 'x1',
-//  yaxis: 'y2',
- // visible: true,
-//}
+var trace2 = {
+    type: "scatter",
+  mode: 'lines',
+  name: 'Waves H_s (m)',
+  x: unpack(rows, 'Var1'),
+  y: unpack(rows, 'Var3'),
+  line: {color: '#7F7F7F'},
+  linewidth: 5,
+  xaxis: 'x1',
+  yaxis: 'y2',
+  visible: true,
+}
 var trace3 = {
   type: "scatter",
   mode: "lines",
@@ -210,22 +210,7 @@ var trace4 = {
   yaxis: 'y2',
   visible: false,
 }
-var data = [{
-	y:y1,
-	mode: 'lines',
-	xaxis: 'x1',
-	yaxis: 'y1',
-	line: {color: '#17BECF'}
-	},
-	{
-	y:y2,
-	mode: 'lines',
-	xaxis: 'x1',
-	yaxis: 'y2',
-	line: {color: '#7F7F7F'},
-	}];
-	    
-//var data  = [trace1,trace2,trace3,trace4];
+var data  = [trace1,trace2,trace3,trace4];
 var layout = {
 	hovermode: "x",
 	images: [
