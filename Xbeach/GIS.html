@@ -129,7 +129,7 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 
 <div>
 	<div id="myDiv" style="width:100%; height: 600px;">
-<div class="hideshow" id="top" style="margin-left:80px;">
+<div class="hideshow" id="1" style="margin-left:80px;">
     <button style=";background:rgb(80,187,111);">US Customary</button>
 </div>		
 		</script>	
@@ -247,11 +247,11 @@ Plotly.newPlot("myDiv", data, layout);
 })
 	$('.hideshow button').click(function(){
     var btn_id = this.parentNode.id,
-        data_index = ( btn_id === 'top' ) ? 0 : 1,
+        data_index = ( btn_id === '1' ) ? 0 : 1,
         myDiv = document.getElementById("myDiv"),
         visible = myDiv.data[data_index].visible;
 
-    if( visible === undefined ) visible = true;
+//    if( visible === undefined ) visible = true;
 
     Plotly.restyle("myDiv", 'visible', !visible, data_index);
 });
