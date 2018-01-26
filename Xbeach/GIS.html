@@ -250,9 +250,20 @@ $('.hideshow button').click(function(){
         var btn_id = this.parentNode.id,
         data_index = ( btn_id === '1' ) ? 0 : 1,
         myDiv = document.getElementById("myDiv"),
-        visible = myDiv.data[data_index].visible,
+	if (data_index == 1)
+        	visible = 
+		[{
+			myDiv.data[0].visible,
+			myDiv.data[1].visible,
+		}];
+	else
+		visible = 
+		[{
+			myDiv.data[2].visible,
+			myDiv.data[3].visible,
+		}];
 
-    if( visible === undefined ) visible = true;
+//    if( visible === undefined ) visible = true;
 
     Plotly.restyle("myDiv", 'visible', !visible, data_index);
 });
