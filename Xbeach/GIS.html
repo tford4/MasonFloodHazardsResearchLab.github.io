@@ -248,7 +248,7 @@ Plotly.newPlot("myDiv", data, layout);
     var btn_id = this.parentNode.id,
         data_index = ( btn_id === 'top' ) ? 0 : 1,
         myDiv = document.getElementById("myDiv"),
-        visible = myDiv.data[data_index].visible;
+        visible = myDiv.data2[data_index].visible;
 
     if( visible === undefined ) visible = true;
 
