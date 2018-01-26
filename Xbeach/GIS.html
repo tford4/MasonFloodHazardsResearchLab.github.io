@@ -247,13 +247,19 @@ var layout = {
 
 Plotly.newPlot("myDiv", data, layout);
 })
-	$('.hideshow button').click(function(){
-    var btn_id = this.parentNode.id,
+$('.hideshow button').click(function(){
+        var btn_id = this.parentNode.id,
+	data.trace1:{
+		visible: false
+	},
+	data.trace2:{
+		visible: false
+	},
         data_index = ( btn_id === '1' ) ? 0 : 1,
         myDiv = document.getElementById("myDiv"),
         visible = myDiv.data[data_index].visible;
 
-//    if( visible === undefined ) visible = true;
+    if( visible === undefined ) visible = true;
 
     Plotly.restyle("myDiv", 'visible', !visible, data_index);
 });
