@@ -164,6 +164,7 @@ Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides
 var trace1 = {
   type: "scatter",
   mode: "lines",
+  mode: 'markers',
   name: 'tide (m)',
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var2'),
@@ -176,6 +177,7 @@ var trace1 = {
 var trace2 = {
   type: "scatter",
   mode: "lines",
+  mode: 'markers',
   name: 'Waves H_s (m)',
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var3'),
