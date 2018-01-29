@@ -144,8 +144,8 @@ var trace1 = {
   type: "scatter",
   mode: "lines",
   name: 'Water Level',
-  x: unpack(rows, 'Var1'),
-  y: unpack(rows, 'Var2'),
+  x: unpack(rows, 'Date'),
+  y: unpack(rows, 'Water'),
   line: {color: '#005ce6',
 	width: 4
 	},	
@@ -157,8 +157,8 @@ var trace2 = {
   type: "scatter",
   mode: "lines",
   name: 'Waves',
-  x: unpack(rows, 'Var1'),
-  y: unpack(rows, 'Var3'),
+  x: unpack(rows, 'Date'),
+  y: unpack(rows, 'Waves'),
   line: {color: '#66a3ff',
 	width: 4
 	},
