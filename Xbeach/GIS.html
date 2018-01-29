@@ -129,8 +129,8 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 
 <div>
 	<div id="myDiv" style="width:100%; height: 600px;">
-<div class="hideshow" id="top" style="margin-left:80px;">
-    <button style=";background:fuchsia;">Toggle </button>
+<button onclick="hideshow" id="1" style="margin-left:80px;">
+    <button style=";background:rgb(80,187,111);">Change Units</button>
 </div>		
 		</script>	
 </div><div>
@@ -163,7 +163,7 @@ Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/waves_tides
 }
 var trace1 = {
   type: "scatter",
-  mode: "lines",
+  mode: 'lines',
   name: 'tide (m)',
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var2'),
@@ -171,11 +171,11 @@ var trace1 = {
   linewidth: 5,	
   xaxis: 'x1',
   yaxis: 'y1',
-  marker: {color: '#17BECF'}
+  visible: true,
 }
 var trace2 = {
-  type: "scatter",
-  mode: "lines",
+    type: "scatter",
+  mode: 'lines',
   name: 'Waves H_s (m)',
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var3'),
@@ -183,11 +183,33 @@ var trace2 = {
   linewidth: 5,
   xaxis: 'x1',
   yaxis: 'y2',
-marker: {color: '#17BECF'}
+  visible: true,
 }
-
-var data = [trace1,trace2];
-
+var trace3 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'Water Level (ft)',
+  x: unpack(rows, 'Var1'),
+  y: unpack(rows, 'Var4'),
+  line: {color: '#17BECF'},
+  linewidth: 5,
+  xaxis: 'x1',
+  yaxis: 'y1',
+  visible: false,
+}
+var trace4 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'Waves H_s (ft)',
+  x: unpack(rows, 'Var1'),
+  y: unpack(rows, 'Var5'),
+  line: {color: '#7F7F7F'},
+  linewidth: 5,
+  xaxis: 'x1',
+  yaxis: 'y2',
+  visible: false,
+}
+var data  = [trace1,trace2,trace3,trace4];
 var layout = {
 	hovermode: "x",
 	images: [
@@ -224,13 +246,13 @@ var layout = {
 
 Plotly.newPlot("myDiv", data, layout);
 })
-	$('.hideshow button').click(function(){
-    var btn_id = this.parentNode.id,
-        data_index = ( btn_id === 'top' ) ? 0 : 1,
+$('.hideshow button').click(function(){
+        var btn_id = this.parentNode.id,
+        data_index = ( btn_id === '1' ) ? 0 : 1,
         myDiv = document.getElementById("myDiv"),
         visible = myDiv.data[data_index].visible;
 
-    if( visible === undefined ) visible = true;
+//    if( visible === undefined ) visible = true;
 
     Plotly.restyle("myDiv", 'visible', !visible, data_index);
 });
