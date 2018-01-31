@@ -1,0 +1,21 @@
+
+ NOAA Station: Washington,D.C. 
+
+ Station ID: 8594900 
+ Flood Level: Minor 
+ Maximum Water Level above NAVD datum: 4.3 feet 
+ Datetime for Predicted Flood Stage :2018-02-03 01:00:00 
+
+
+
+
+ For more details on the Forecast System,contact us at
+ akhalid6@gmu.edu or visit our website
+ https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html
+
+
+
+
+ **This is not the official forecast,please visit the NOAA official website for decision making. 
+
+ http://water.weather.gov/ahps/ 
