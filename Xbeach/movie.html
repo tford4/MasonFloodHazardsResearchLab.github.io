@@ -156,7 +156,7 @@ Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/wave_diff.c
 var trace1 = {
   type: "scatter",
   mode: "lines",
-  name: 'Waves with Vege',
+  name: 'no vegetation',
   x: unpack(rows, "Var1"),
   y: unpack(rows, "Var2"),
   line: {color: '#005ce6',
@@ -168,7 +168,7 @@ var trace1 = {
 var trace2 = {
   type: "scatter",
   mode: "lines",
-  name: 'Waves no Vege',
+  name: 'vegetation',
   x: unpack(rows, "Var1"),
   y: unpack(rows, "Var3"),
   line: {color: '#0192ff',
@@ -202,7 +202,7 @@ var layout = {
 	},
 	yaxis: {
 		domain:[0, .5],
-		title: 'Elevation above NavD88(m)',
+		title: 'Hs (m)',
 		range: [-1, 1],
 	},
 
