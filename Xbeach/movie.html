@@ -146,7 +146,72 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 			
 <p>    </p>
         </div>
+	    <div></div>
+	    	  <div id="myDiv2" style="width:110%; height: 320px;">	    
+<script>
+Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/wave_diff.csv", function(err, rows){
+  function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+var trace1 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'Waves with Vege',
+  x: unpack(rows, "Var1"),
+  y: unpack(rows, "Var2"),
+  line: {color: '#005ce6',
+	width: 4
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var trace2 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'Waves no Vege',
+  x: unpack(rows, "Var1"),
+  y: unpack(rows, "Var3"),
+  line: {color: '#0192ff',
+	width: 4
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [trace1,trace2];
+var layout = {	
+	showlegend: false,
+	hovermode: "x",
+	images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x:0,
+		y:1,
+		sizex:1,
+		sizey:1,
+		opacity: 0.2,
+		layer:"below"}],
+	xaxis: {
+		anchor: 'y1',
+		autotick: true,
+    		nticks: 8,
+    		tickcolor: 'rgb(204,204,204)',
+		tickwidth: 5,
+    		//ticklen: 5
+	},
+	yaxis: {
+		domain:[0, 1],
+		title: 'Elevation above NavD88(m)',
+		range: [-1, 1],
+	},
 
+};
+Plotly.newPlot('myDiv2', data, layout,{displayModeBar: false});
+	
+
+})
+			  </script></div>
 <div>	          </div>
 	  <div id="myDiv" style="width:110%; height: 320px;">	    
 <script>
