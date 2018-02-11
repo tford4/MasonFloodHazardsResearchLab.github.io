@@ -133,6 +133,8 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 <p>This model produces coastal flooding and marsh erosion for current conditions and up to 84 hours into the future.</p>
 <p>The top panel displays the most up to date conditions in the marsh. Field based vegetation survey is used to represent the marsh resistance to flooding and wave attenuation.</p>
 <p>The bottom panel represents a hypothetical set-up where the vegetation is artificially removed from the system. In this animation we demonstrate, in real-time and for the next 84 hours, the impact of nature-based defenses for coastal protection. This simulations shows what the current conditions would be in the area without the presence of the vegetation.</p>
+<p>The Hs plot below shows the waves 75m from the beginning of the marsh, also shown as the red dot in the video.</p>
+
 <br>
 	
 	<video width="100%" height="500" controls>
@@ -148,8 +150,6 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
         </div>
 	    <div></div>
 	    	  <div id="myDiv2" style="width:110%; height: 320px;">
-	    <p>The plot above shows the wave height with and without vegetation 75m from the start of the marsh.</p>
-
 <script>	
 Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/wave_diff.csv", function(err, rows){
   function unpack(rows, key) {
