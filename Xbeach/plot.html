@@ -157,14 +157,14 @@ var trace2 = {
   type: "scatter",
   mode: "lines",
   name: 'Waves',
+  type: 'bar',
   x: unpack(rows, 'Var1'),
   y: unpack(rows, 'Var3'),
-  bar: {color: '#66a3ff',
+  lines: {color: '#66a3ff',
 	width: 4
 	},
   xaxis: 'x1',
-  yaxis: 'y2',
-  type: 'bar'
+  yaxis: 'y2'
 }
 
 var data = [trace1,trace2];
