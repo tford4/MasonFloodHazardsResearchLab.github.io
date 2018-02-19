@@ -219,6 +219,20 @@ charts: {
     sst: "http://cdn.magicseaweed.com/sst/750/1-1366902000-10.gif"
 }
 }]
+			var rating = [];
+ 
+// Loop the solid rating on a single forecast object.
+for (var i = 0; i < forecast.solidRating; i++) {
+    rating.push('<img src="http://cdnimages.magicseaweed.com/star_filled.png" />');
+}
+ 
+// Loop the faded rating on a single forecast object.
+for (var i = 0; i < forecast.fadedRating; i++) {
+    rating.push('<img src="http://cdnimages.magicseaweed.com/star_empty.png" />');
+}
+ 
+document.getElementById("ratingContainer").innerHTML = rating.join(" ");
+			
 			.msw-swa /* Inherits from swell arrows */
 {
     background:         url("http://im-1.msw.ms/md/static/sa-sprite.png") no-repeat top left;
