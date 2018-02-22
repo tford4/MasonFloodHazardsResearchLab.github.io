@@ -150,7 +150,7 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 
 <div>	          </div>
 	    </br>
-	  <div id="myDiv" style="width:110%; height: 450px;">	    
+	  <div id="myDiv" style="width:110%; height: 475px;">	    
 <script>
 Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/mgb_tides.csv", function(err, rows){
   function unpack(rows, key) {
@@ -219,11 +219,21 @@ var layout = {
 		domain:[0, 0.45],
 		title: 'Elevation above NavD88(m)',
 		range: [-1, 1],
+		font: {
+			family: 'Times New Roman',
+			size: 10,
+			color: '#000000'
+			},			
 	},
 	yaxis2: {
 		showgrid: true,
 		//gridcolor: 'rgb(0,0,0)',
 		gridwidth: .05,
+		font: {
+			family: 'Times New Roman',
+			size: 10,
+			color: '#000000'
+			},	
 		domain:[0.55, 1],
 		title: 'Hs(m)',
 		range: [-0.1, 1],
