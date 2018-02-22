@@ -147,76 +147,10 @@ Magothy Bay Coastal Flood and Erosion Forecast System powered by XBEACH</b>
 <div></div> 	
 			
 <p>    </p>
-        </div>
-	    <div></div>
-	    	  <div id="myDiv2" style="width:110%; height: 320px;">
-<script>	
-Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/wave_diff.csv", function(err, rows){
-  function unpack(rows, key) {
-  return rows.map(function(row) { return row[key]; });
-}
-var trace1 = {
-  type: "scatter",
-  mode: "lines",
-  name: 'vegetation',
-  x: unpack(rows, "Var1"),
-  y: unpack(rows, "Var2"),
-  line: {color: '#005ce6',
-	width: 4
-	},
-  xaxis: 'x1',
-  yaxis: 'y1'
-}
-var trace2 = {
-  type: "scatter",
-  mode: "lines",
-  name: 'no vegetation',
-  x: unpack(rows, "Var1"),
-  y: unpack(rows, "Var3"),
-  line: {color: '#0192ff',
-	width: 4
-	},
-  xaxis: 'x1',
-  yaxis: 'y1'
-}
-var data2 = [trace1,trace2];
-var layout = {	
-	showlegend: false,
-	hovermode: "x",
-	images: [
-		{
-		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
-		xref:"paper",
-		yref:"paper",
-		x:0,
-		y:1,
-		sizex:1,
-		sizey:1,
-		opacity: 0.2,
-		layer:"below"}],
-	xaxis: {
-		anchor: 'y1',
-		autotick: true,
-    		nticks: 8,
-    		tickcolor: 'rgb(204,204,204)',
-		tickwidth: 5,
-    		//ticklen: 5
-	},
-	yaxis: {
-		domain:[0, 1],
-		title: 'Hs (m)',
-		range: [0, .5],
-	},
 
-};
-Plotly.newPlot('myDiv2', data2, layout,{displayModeBar: false});
-	
-
-})
-			  </script></div>
 <div>	          </div>
 	    </br>
-	  <div id="myDiv" style="width:110%; height: 320px;">	    
+	  <div id="myDiv" style="width:110%; height: 350px;">	    
 <script>
 Plotly.d3.csv("https://masonfloodhazardsresearchlab.github.io/Xbeach/mgb_tides.csv", function(err, rows){
   function unpack(rows, key) {
@@ -234,7 +168,31 @@ var trace1 = {
   xaxis: 'x1',
   yaxis: 'y1'
 }
-var data = [trace1];
+var trace2 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'Vegetation',
+  x: unpack(rows, "Var1"),
+  y: unpack(rows, "Var3"),
+  line: {color: '#6699ff',
+	width: 4
+	},
+  xaxis: 'x1',
+  yaxis: 'y2'
+}
+var trace3 = {
+  type: "scatter",
+  mode: "lines",
+  name: 'No Vegetation',
+  x: unpack(rows, "Var1"),
+  y: unpack(rows, "Var4"),
+  line: {color: '#00ccff',
+	width: 4
+	},
+  xaxis: 'x1',
+  yaxis: 'y2'
+}
+var data = [trace1, trace2, trace3];
 var layout = {	
 	showlegend: false,
 	hovermode: "x",
@@ -258,9 +216,17 @@ var layout = {
     		//ticklen: 5
 	},
 	yaxis: {
-		domain:[0, 1],
+		domain:[0, 0.45],
 		title: 'Elevation above NavD88(m)',
 		range: [-1, 1],
+	},
+	yaxis2: {
+		showgrid: true,
+		//gridcolor: 'rgb(0,0,0)',
+		gridwidth: .05,
+		domain:[0.55, 1],
+		title: 'Hs(m)',
+		range: [-0.1, 1],
 	},
 
 };
