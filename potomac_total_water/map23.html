@@ -27,11 +27,18 @@
           zoom: 11,
           center: {lat: 38.393, lng: -77.033}
         });
-
+        
+        
         var ctaLayer = new google.maps.KmlLayer({
-          url: 'https://MasonFloodHazardsResearchLab.github.io/potomac_total_water/river_xs_jan.kml', 
+          url: 'https://MasonFloodHazardsResearchLab.github.io/potomac_total_water/WSEto_KMZ.kmz',
+          map: map
+        });   
+        
+        var ctaLayer = new google.maps.KmlLayer({
+          url: 'https://MasonFloodHazardsResearchLab.github.io/potomac_total_water/river_xs_march.kml',
           map: map
         });
+           
       }
     </script>
     <script async defer
