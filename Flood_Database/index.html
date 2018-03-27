@@ -89,22 +89,22 @@ rel="icon" type="image/x-icon" />
 
 
           <li>
-            <a href="plot.html">Croatan Beach</a>
+            <a href="plot.html">Plot</a>
            
           </li>
 
 
        <li>
-            <a href="movie.html">Magothy Bay</a>
+            <a href="movie.html">Movie</a>
            
           </li>
        <li>
-            <a href="map.html">Ingleses Beach</a>
+            <a href="map.html">Map</a>
            
           </li>
        <li>
             
-            <a href="models.html">Locations</a>
+            <a href="models.html">Models</a>
           </li>
       <li>
             <a href="GIS.html">GIS Data</a>
@@ -124,13 +124,13 @@ rel="icon" type="image/x-icon" />
 <!--InstanceBeginEditable name="intro-photo" -->
      <p style="font-size: 17px"><b>
 <br/>
-Coastal Flood and Erosion Forecast System powered by XBEACH</b>
+Historical Flood Database in the Potomac River</b>
 </p>
 
 <!--InstanceEndEditable -->
-<p>This system provides coastal flood and erosion forecasts for the Magothy Bay Natural Area Preserve and for Croatan beach in Virginia Beach using the XBEACH 1D model. The system is run 4 times a day and provides topo/bathymetric (coastal erosion) and coastal flooding forecasts for the next 84 hours. It utilizes the Mason Flood Hazards Chesapeake Bay Flood Forecasting system as a boundary condition. This system is under development.</p>
+<p> </p>
 <br/>
-		<p>Click on the study sights to view the forecast.</p>
+		<p></p>
 		<br/>
 		
 <!--Main elements of page.. main body comes below-->
@@ -142,49 +142,7 @@ Coastal Flood and Erosion Forecast System powered by XBEACH</b>
   <!DOCTYPE html>
 <html>
   <head>
-    <style>
-       #map {
-        height: 700px;
-        width: 100%;
-       }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var coast = {lat: 37.032405, lng: -76.101573};
-	var sites = [
-		{lat: 37.151106, lng: -75.942514},
-		{lat: 36.81826, lng:-75.966854}
-		];
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: coast,
-	  mapTypeId: 'satellite'
-        });
-  	var marker1 =  new google.maps.Marker({			    
-   		position: sites[0],
-		url: 'https://masonfloodhazardsresearchlab.github.io/Xbeach/movie.html',
-		map:map
-	});
-	 var marker2 =  new google.maps.Marker({			    
-   		position: sites[1],
-		url: 'https://masonfloodhazardsresearchlab.github.io/Xbeach/plot.html',
-		map:map
-	});
-	 var link = new google.maps.event.addListener(marker1, 'click', function(){
-		 window.location.href = marker1.url;
-	 });
-	var link2 = new google.maps.event.addListener(marker2, 'click', function(){
-		 window.location.href = marker2.url;
-	 });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxxNFfBGLejQpYRB0uUgsQBKh26DNM-Zc&callback=initMap">
-    </script>
-  </body>
+ 
   
   
   
